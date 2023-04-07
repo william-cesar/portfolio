@@ -16,6 +16,12 @@ const toggleDark = useToggle(isDark);
   <h2>This is h2</h2>
   <h3>This is h3</h3>
   <RouterLink to="/">HOME</RouterLink>
-  <a class="external-link" href="sasa">This is a link</a>
-  <button class="btn-primary" @click="toggleDark()">Toggle Color Mode</button>
+  <a
+    class="external-link"
+    href="sasa"
+  >This is a link</a>
+  <button
+    class="btn-primary"
+    @click="toggleDark()"
+  >Toggle Color Mode</button>
 </template>
