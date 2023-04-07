@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { useDark, useToggle } from '@vueuse/core';
-import type { WritableComputedRef } from 'vue';
-
-const isDark: WritableComputedRef<boolean> = useDark();
-const toggleDark = useToggle(isDark);
-</script>
-
 <template>
   <p class="primary-text">Paragraph primary-text</p>
   <p class="secondary-text">Paragraph secondary-text</p>
@@ -20,8 +12,7 @@ const toggleDark = useToggle(isDark);
     class="external-link"
     href="sasa"
   >This is a link</a>
-  <button
-    class="btn-primary"
-    @click="toggleDark()"
-  >Toggle Color Mode</button>
 </template>
+
+<script setup lang="ts">
+</script>
