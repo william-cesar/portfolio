@@ -3,3 +3,7 @@
   padding-right: $spacing-32;
   padding-top: $spacing-32;
 }
+
+@mixin header-padding() {
+  padding: $spacing-16 $spacing-32;
+}

@@ -1,0 +1,25 @@
+$screen-xsmall: 376px;
+$screen-small: 539px;
+
+
+/* --- */
+$media-query-list: (
+  'screen-xsmall': (
+    max-width: $screen-xsmall,
+  ),
+  'screen-small': (
+    max-width: $screen-small,
+  ),
+) !default;
+
+@mixin media-query($media-query) {
+  $selected-media: map.get($media-query-list, $media-query);
+
+  @if $selected-media {
+    @media #{inspect($selected-media)} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$media-query}`. Please make sure it is defined in `$mediaQuery` map.';
+  }
+}
