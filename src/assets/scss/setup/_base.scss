@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-16;
+  font-family: $font-family-1;
+}
+
+body {
+  background-color: $primary-background-color;
+  color: $primary-color;
+}
+
+.dark body {
+  background-color: $primary-background-color-inverse;
+  color: $primary-color-inverse;
+}
+
+.page {
+  @include page-padding();
+}

@@ -1,0 +1,36 @@
+body {
+  a {
+    text-decoration: none;
+    color: $secondary-color-hover;
+
+    &.external-link {
+      font-size: $font-size-14;
+    }
+
+    &:hover:not(:disabled) {
+      cursor: pointer;
+      color: $secondary-text-color;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: $tertiary-text-color;
+    }
+  }
+}
+
+// DARK MODE
+
+.dark body {
+  a {
+    color: $secondary-text-color-inverse;
+
+    &:hover:not(:disabled) {
+      color: $secondary-color-hover-inverse;
+    }
+
+    &:disabled {
+      color: $tertiary-text-color-inverse;
+    }
+  }
+}

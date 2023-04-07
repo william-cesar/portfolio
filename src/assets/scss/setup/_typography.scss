@@ -1,0 +1,59 @@
+body {
+  span {
+    font-size: $font-size-14;
+  }
+
+  p.primary-text {
+    color: $primary-text-color;
+  }
+
+  p.secondary-text {
+    color: $secondary-text-color;
+  }
+
+  p.tertiary-text,
+  span.muted-text {
+    color: $tertiary-text-color;
+  }
+
+  span.info-text {
+    color: $secondary-text-color;
+  }
+
+  .error-text {
+    color: $error-color;
+
+    &:hover {
+      color: $error-color-hover;
+    }
+  }
+
+  .success-text {
+    color: $success-color;
+
+    &:hover {
+      color: $success-color-hover;
+    }
+  }
+}
+
+// DARK MODE
+
+.dark body {
+  p.primary-text {
+    color: $primary-text-color-inverse;
+  }
+
+  p.secondary-text {
+    color: $secondary-text-color-inverse;
+  }
+
+  p.tertiary-text,
+  span.muted-text {
+    color: $tertiary-text-color-inverse;
+  }
+
+  span.info-text {
+    color: $secondary-text-color-inverse;
+  }
+}

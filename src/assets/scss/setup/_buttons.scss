@@ -1,0 +1,57 @@
+button {
+  padding: $spacing-8;
+  border-radius: $size-5;
+  border: $size-1 solid transparent;
+  cursor: pointer;
+
+  &.btn-primary {
+    background-color: $secondary-color;
+    color: $primary-text-color;
+
+    &:hover:not(:disabled) {
+      background-color: $secondary-color-hover;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $primary-color;
+    color: $secondary-text-color;
+
+    &:hover:not(:disabled) {
+      background-color: $primary-color-hover;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $tertiary-color;
+    color: $tertiary-text-color;
+  }
+}
+
+// DARK MODE
+
+.dark button {
+  &.btn-primary {
+    background-color: $secondary-color-inverse;
+    color: $primary-text-color-inverse;
+
+    &:hover:not(:disabled) {
+      background-color: $secondary-color-hover-inverse;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $primary-color-inverse;
+    color: $secondary-text-color-inverse;
+
+    &:hover:not(:disabled) {
+      background-color: $primary-color-hover-inverse;
+    }
+  }
+
+  &:disabled {
+    background-color: $tertiary-color-inverse;
+    color: $tertiary-text-color-inverse;
+  }
+}

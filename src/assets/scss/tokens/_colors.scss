@@ -1,0 +1,62 @@
+:root {
+  --white-100: #ffffff;
+  --white-200: #f2f2f2;
+  --white-300: #e5e5e5;
+
+  --black-300: #242225;
+  --black-400: #2c2a2c;
+  --black-500: #1b1b1b;
+
+  --purple-200: #9e5def;
+  --purple-400: #9a61ef;
+  --purple-500: #7c33eb;
+
+  --gray-200: #c6c6c6;
+  --gray-300: #a2a2a2;
+  --gray-400: #8e8e8e;
+  --gray-500: #737f84;
+
+  --green-100: #659680;
+  --green-200: #42a084;
+
+  --red-100: #f44336;
+  --red-200: #b33c12;
+}
+
+$primary-background-color: var(--white-200);
+$secondary-background-color: var(--white-100);
+
+$primary-color: var(--black-400);
+$secondary-color: var(--purple-400);
+$tertiary-color: var(--gray-200);
+
+$primary-text-color: var(--black-300);
+$secondary-text-color: var(--purple-200);
+$tertiary-text-color: var(--gray-400);
+
+$primary-color-hover: var(--black-500);
+$secondary-color-hover: var(--purple-500);
+$tertiary-color-hover: var(--gray-500);
+
+$success-color: var(--green-100);
+$success-color-hover: var(--green-200);
+
+$error-color: var(--red-100);
+$error-color-hover: var(--red-200);
+
+// DARK MODE
+
+$primary-background-color-inverse: var(--black-400);
+$secondary-background-color-inverse: var(--purple-400);
+
+$primary-color-inverse: var(--white-200);
+$secondary-color-inverse: var(--purple-500);
+$tertiary-color-inverse: var(--gray-200);
+
+$primary-text-color-inverse: var(--white-200);
+$secondary-text-color-inverse: var(--purple-400);
+$tertiary-text-color-inverse: var(--gray-400);
+
+$primary-color-hover-inverse: var(--white-300);
+$secondary-color-hover-inverse: var(--purple-200);
+$tertiary-color-hover-inverse: var(--gray-500);

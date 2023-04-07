@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './tokens/animations';
+@import './tokens/colors';
+@import './tokens/sizes';
+@import './tokens/fonts';
+@import './tokens/spacing';
+@import './mixins/page-padding';
+@import './setup/index';
