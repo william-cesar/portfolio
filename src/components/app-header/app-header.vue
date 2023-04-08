@@ -26,6 +26,10 @@ import PagesLinksTray from './components/pages-links-tray/pages-links-tray.vue';
   justify-content: space-between;
   position: relative;
 
+  & > .pages-links-tray {
+    display: none;
+  }
+
   & > .right-float {
     @include centralize-vertically();
     gap: $spacing-40;
@@ -34,5 +38,18 @@ import PagesLinksTray from './components/pages-links-tray/pages-links-tray.vue';
 
 .dark .app-header {
   background-color: $secondary-background-color-inverse;
+}
+
+@include media-query('screen-small') {
+  .app-header {
+    & > .pages-links-tray {
+      display: flex;
+    }
+
+    & > .right-float > .pages-links {
+      display: none;
+    }
+
+  }
 }
 </style>

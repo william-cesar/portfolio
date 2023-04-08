@@ -4,6 +4,7 @@
       class="links"
       to="/about"
       title="About page"
+      @click="pageSelected"
     >
       About
     </RouterLink>
@@ -11,6 +12,7 @@
       class="links"
       to="/projects"
       title="Projects page"
+      @click="pageSelected"
     >
       Projects
     </RouterLink>
@@ -18,11 +20,17 @@
       class="links"
       to="/contact"
       title="Contact page"
+      @click="pageSelected"
     >
       Contact
     </RouterLink>
   </nav>
 </template>
+
+<script setup lang="ts">
+const emit = defineEmits(['page-selected']);
+const pageSelected = (): void => emit('page-selected');
+</script>
 
 <style lang="scss">
 .pages-links {
