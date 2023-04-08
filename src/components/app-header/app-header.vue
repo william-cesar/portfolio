@@ -1,17 +1,19 @@
 <template>
   <header class="app-header">
     <header-title />
+    <pages-links-tray />
     <section class="right-float">
-      <page-links />
       <theme-switcher />
+      <pages-links />
     </section>
   </header>
 </template>
 
 <script setup>
 import ThemeSwitcher from './components/theme-switcher/theme-switcher.vue';
-import PageLinks from './components/pages-links/pages-links.vue';
+import PagesLinks from './components/pages-links/pages-links.vue';
 import HeaderTitle from './components/header-title/header-title.vue';
+import PagesLinksTray from './components/pages-links-tray/pages-links-tray.vue';
 </script>
 
 <style lang="scss">
@@ -22,6 +24,7 @@ import HeaderTitle from './components/header-title/header-title.vue';
   background-color: $secondary-background-color;
   height: $size-60;
   justify-content: space-between;
+  position: relative;
 
   & > .right-float {
     @include centralize-vertically();
