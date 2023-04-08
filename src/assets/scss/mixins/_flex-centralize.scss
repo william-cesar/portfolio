@@ -1,0 +1,15 @@
+@mixin centralize-horizontally() {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin centralize-vertically() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin centralize() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

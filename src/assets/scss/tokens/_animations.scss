@@ -1,4 +1,13 @@
-$animation-type-dissolve: ease;
+$animation-speed-xslow: 500ms;
 $animation-speed-slow: 300ms;
 $animation-speed-medium: 225ms;
 $animation-speed-high: 150ms;
+
+$animation-delay-xlong: 2s;
+$animation-delay-long: 1s;
+$animation-delay-normal: 500ms;
+$animation-delay-short: 250ms;
+
+$animation-bounce-begin: 0px;
+$animation-bounce-middle: -1.5px;
+$animation-bounce-end: -3px;

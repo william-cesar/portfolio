@@ -1,0 +1,9 @@
+@mixin square-element($side-size) {
+  width: $side-size;
+  height: $side-size;
+}
+
+@mixin circle-element($circle-size) {
+  @include square-element($circle-size);
+  border-radius: 50%;
+}

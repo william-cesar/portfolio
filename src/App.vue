@@ -1,5 +1,5 @@
 <template>
-  <header>Header component</header>
+  <app-header />
   <div class="page">
     <RouterView />
   </div>
@@ -7,6 +7,7 @@
 
 <script setup lang="ts">
 import { RouterView } from 'vue-router';
+import { AppHeader } from '@/components/index';
 </script>
 
 <style lang="scss">
