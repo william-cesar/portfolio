@@ -32,11 +32,16 @@
   & > .links {
     font-family: $font-family-2;
     font-size: $font-size-16;
+    color: $primary-color-hover;
+
+    &:hover {
+      color: $primary-text-color;
+    }
 
     &.router-link-active,
     &.router-link-active:hover {
-      border-bottom: $size-1 solid $secondary-color;
-      color: $secondary-color;
+      border-bottom: $size-1 solid $primary-color-hover;
+      color: $primary-color-hover;
     }
   }
 }

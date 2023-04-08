@@ -16,12 +16,11 @@
 
 <style lang="scss">
 .dark-mode-icon {
+  @include square-element($size-12);
   position: absolute;
   z-index: 1;
   isolation: isolate;
   cursor: pointer;
-  height: $size-12;
-  width: $size-12;
   top: $spacing-2;
   right: $spacing-2;
 

@@ -50,9 +50,8 @@ const toggleMessage: ComputedRef<string> = computed(() => {
   height: $size-16;
 
   & > input {
+    @include square-element($size-0);
     opacity: 0;
-    width: $size-0;
-    height: $size-0;
   }
 
   & > .slider {
@@ -66,10 +65,9 @@ const toggleMessage: ComputedRef<string> = computed(() => {
   }
 
   & > .slider:before {
+    @include square-element($size-16);
     position: absolute;
     content: "";
-    height: $size-16;
-    width: $size-16;
     left: $spacing-0;
     bottom: $spacing-0;
     background-color: $secondary-color-inverse;
@@ -91,8 +89,6 @@ const toggleMessage: ComputedRef<string> = computed(() => {
 
   & > input:checked + .slider:before {
     background-color: $primary-color;
-    -webkit-transform: translateX($spacing-16);
-    -ms-transform: translateX($spacing-16);
     transform: translateX($spacing-16);
   }
 }
