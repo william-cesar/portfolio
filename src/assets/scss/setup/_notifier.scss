@@ -1,0 +1,25 @@
+:root {
+  --toastify-color-light: var(--white-100) !important;
+  --toastify-color-dark: var(--white-200) !important;
+  --toastify-color-info: var(--purple-200) !important;
+  --toastify-color-success: var(--green-200) !important;
+  --toastify-color-error: var(--red-100) !important;
+
+  --toastify-icon-color-info: var(--toastify-color-info);
+  --toastify-icon-color-success: var(--toastify-color-success);
+  --toastify-icon-color-warning: var(--toastify-color-warning);
+  --toastify-icon-color-error: var(--toastify-color-error);
+
+  --toastify-toast-width: 300px !important;
+  --toastify-font-family: 'Roboto', sans-serif !important;
+
+  --toastify-toast-background: red !important;
+
+  --toastify-text-color-light: var(--black-300) !important;
+  --toastify-text-color-dark: var(--black-300) !important;
+}
+
+.Toastify__close-button {
+  color: $tertiary-color-hover !important;
+  opacity: 1 !important;
+}
