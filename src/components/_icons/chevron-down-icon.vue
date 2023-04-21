@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="chevron-down"
+    class="chevron-down-icon"
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
@@ -14,7 +14,7 @@
 </template>
 
 <style lang="scss">
-.chevron-down {
+.chevron-down-icon {
   @include square-element($size-32);
 
   & > path {
@@ -22,7 +22,7 @@
   }
 }
 
-.dark .chevron-down {
+.dark .chevron-down-icon {
   & > path {
     fill: $primary-color-hover-inverse;
   }
