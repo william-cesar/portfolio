@@ -4,7 +4,6 @@
     v-if="displayComponent"
   >
     <vue-pdf-embed
-      ref="resume"
       width="256"
       :source="Resume"
       disableTextLayer
