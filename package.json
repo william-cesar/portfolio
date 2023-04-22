@@ -18,7 +18,9 @@
   "dependencies": {
     "@vueuse/core": "^9.13.0",
     "vue": "^3.2.47",
-    "vue-router": "^4.1.6"
+    "vue-pdf-embed": "^1.1.5",
+    "vue-router": "^4.1.6",
+    "vue3-toastify": "^0.1.7"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",

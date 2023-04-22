@@ -24,3 +24,7 @@ body {
   inset: 0;
   top: $spacing-60;
 }
+
+hr {
+  border-top: $size-1 solid $secondary-color;
+}

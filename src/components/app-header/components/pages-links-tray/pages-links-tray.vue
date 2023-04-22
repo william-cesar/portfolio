@@ -4,7 +4,7 @@
       class="toggle-tray-button"
       @click="toggleTray"
     >
-      <chevron-down :class="trayState" />
+      <chevron-down-icon :class="trayState" />
     </button>
     <div :class="['tray', trayState, isTouched && 'tray-touched']">
       <pages-links @page-selected="isOpen = false" />
@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import ChevronDown from '@/components/_icons/chevron-down.vue';
+import ChevronDownIcon from '@/components/_icons/chevron-down-icon.vue';
 import PagesLinks from '../pages-links/pages-links.vue';
 import { computed, type ComputedRef } from 'vue';
 import { ref, type Ref } from 'vue';
