@@ -233,6 +233,5 @@ $notch-camera-background: #272727;
     transform: translateY(0%);
     transition: $animation-speed-xslow $animation-delay-normal;
   }
-
 }
 </style>
