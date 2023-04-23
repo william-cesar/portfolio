@@ -254,4 +254,8 @@ $notch-camera-background: #272727;
     }
   }
 }
+
+.dark .app-phone > .phone-body {
+  background-color: $white-300;
+}
 </style>
