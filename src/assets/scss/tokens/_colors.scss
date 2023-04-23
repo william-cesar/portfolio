@@ -23,40 +23,63 @@
   --red-200: #b62711;
 }
 
-$primary-background-color: var(--white-200);
-$secondary-background-color: var(--white-100);
+$white-100: var(--white-100);
+$white-200: var(--white-200);
+$white-300: var(--white-300);
 
-$primary-color: var(--black-400);
-$secondary-color: var(--purple-400);
-$tertiary-color: var(--gray-200);
+$black-300: var(--black-300);
+$black-400: var(--black-400);
+$black-500: var(--black-500);
 
-$primary-text-color: var(--black-300);
-$secondary-text-color: var(--purple-200);
-$tertiary-text-color: var(--gray-400);
+$purple-200: var(--purple-200);
+$purple-400: var(--purple-400);
+$purple-500: var(--purple-500);
 
-$primary-color-hover: var(--black-500);
-$secondary-color-hover: var(--purple-500);
-$tertiary-color-hover: var(--gray-500);
+$gray-200: var(--gray-200);
+$gray-300: var(--gray-300);
+$gray-400: var(--gray-400);
+$gray-500: var(--gray-500);
 
-$success-color: var(--green-100);
-$success-color-hover: var(--green-200);
+$green-100: var(--green-100);
+$green-200: var(--green-200);
 
-$error-color: var(--red-100);
-$error-color-hover: var(--red-200);
+$red-100: var(--red-100);
+$red-200: var(--red-200);
+
+$primary-background-color: $white-200;
+$secondary-background-color: $white-100;
+
+$primary-color: $black-400;
+$secondary-color: $purple-400;
+$tertiary-color: $gray-200;
+
+$primary-text-color: $black-300;
+$secondary-text-color: $purple-200;
+$tertiary-text-color: $gray-400;
+
+$primary-color-hover: $black-500;
+$secondary-color-hover: $purple-500;
+$tertiary-color-hover: $gray-500;
+
+$success-color: $green-100;
+$success-color-hover: $green-200;
+
+$error-color: $red-100;
+$error-color-hover: $red-200;
 
 // DARK MODE
 
-$primary-background-color-inverse: var(--black-400);
-$secondary-background-color-inverse: var(--purple-400);
+$primary-background-color-inverse: $black-400;
+$secondary-background-color-inverse: $purple-400;
 
-$primary-color-inverse: var(--white-200);
-$secondary-color-inverse: var(--purple-500);
-$tertiary-color-inverse: var(--gray-200);
+$primary-color-inverse: $white-200;
+$secondary-color-inverse: $purple-500;
+$tertiary-color-inverse: $gray-200;
 
-$primary-text-color-inverse: var(--white-200);
-$secondary-text-color-inverse: var(--purple-400);
-$tertiary-text-color-inverse: var(--gray-400);
+$primary-text-color-inverse: $white-200;
+$secondary-text-color-inverse: $purple-400;
+$tertiary-text-color-inverse: $gray-400;
 
-$primary-color-hover-inverse: var(--white-300);
-$secondary-color-hover-inverse: var(--purple-200);
-$tertiary-color-hover-inverse: var(--gray-500);
+$primary-color-hover-inverse: $white-300;
+$secondary-color-hover-inverse: $purple-200;
+$tertiary-color-hover-inverse: $gray-500;
