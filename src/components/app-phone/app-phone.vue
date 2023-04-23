@@ -5,7 +5,10 @@
       <div class="phone-antenna antenna-bottom"></div>
       <div class="phone-screen">
         <div class="screen-view">
-          <phone-notification />
+          <div class="phone-info">
+            <phone-clock />
+            <phone-notification />
+          </div>
         </div>
         <div class="phone-notch">
           <div class="notch-speaker"></div>
@@ -22,6 +25,7 @@
 
 <script setup lang="ts">
 import PhoneNotification from './components/phone-notification.vue';
+import PhoneClock from './components/phone-clock.vue';
 </script>
 
 <style lang="scss">
@@ -121,15 +125,18 @@ $notch-camera-background: #272727;
   }
 
   & > .phone-body > .phone-screen > .screen-view {
-    @include centralize-vertically();
-    @include square-element(100%);
-    flex: 1;
-    flex-direction: column;
-    justify-content: end;
-    padding: $spacing-8;
+    height: 100%;
     margin: $size-1;
     border-radius: $size-32;
     overflow: hidden;
+    position: relative;
+  }
+
+  & > .phone-body > .phone-screen > .screen-view > .phone-info {
+    @include centralize-vertically();
+    flex-direction: column;
+    gap: $spacing-24;
+    padding: $spacing-32 $spacing-8;
     position: relative;
   }
 
@@ -208,7 +215,7 @@ $notch-camera-background: #272727;
 
   // notifications
 
-  & > .phone-body > .phone-screen > .screen-view > .phone-notification {
+  & > .phone-body > .phone-screen > .screen-view > .phone-info {
     z-index: 1;
     transform: translateY(120%);
     transition: $animation-speed-xslow $animation-delay-short;
@@ -231,7 +238,7 @@ $notch-camera-background: #272727;
       transition: $animation-speed-xslow $animation-delay-short;
     }
 
-    & > .phone-body > .phone-screen:hover > .screen-view > .phone-notification {
+    & > .phone-body > .phone-screen:hover > .screen-view > .phone-info {
       transform: translateY(0%);
       transition: $animation-speed-xslow $animation-delay-normal;
     }
@@ -248,7 +255,7 @@ $notch-camera-background: #272727;
       transition: $animation-speed-xslow $animation-delay-short;
     }
 
-    & > .phone-body > .phone-screen > .screen-view > .phone-notification {
+    & > .phone-body > .phone-screen > .screen-view > .phone-info {
       transform: translateY(0%);
       transition: $animation-speed-xslow $animation-delay-normal;
     }
