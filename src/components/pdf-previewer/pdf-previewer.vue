@@ -24,7 +24,7 @@ import { ref, type Ref } from 'vue';
 import VuePdfEmbed from 'vue-pdf-embed';
 import notifier from '@/plugins/notifier';
 import DownloadFileIcon from '@/components/_icons/download-file-icon.vue';
-import Resume from '@/assets/files/Resume.pdf';
+import Resume from '@/assets/files/pdf/Resume.pdf';
 
 const displayComponent: Ref<boolean> = ref(true);
 
