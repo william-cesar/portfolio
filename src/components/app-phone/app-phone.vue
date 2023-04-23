@@ -17,7 +17,6 @@
     <div class="phone-btn left-btn top-left-btn"></div>
     <div class="phone-btn left-btn middle-left-btn"></div>
     <div class="phone-btn left-btn bottom-left-btn"></div>
-    <!-- <div class="back"></div> -->
   </div>
 </template>
 
@@ -34,16 +33,12 @@ $notch-speaker-background: #070808;
 $notch-camera-background: #272727;
 
 .app-phone {
-  width: min(20em, 50svh);
-  height: min(40em, 100svh);
+  width: min(20rem, 100%);
+  height: min(40rem, 100svh);
   display: flex;
   position: relative;
-  transition: all cubic-bezier(0.36, 0.41, 0.38, 1) 0.4s;
+  transition: all cubic-bezier(0.36, 0.41, 0.38, 1) $animation-delay-normal;
   isolation: isolate;
-
-  &:hover {
-    transform: scale(0.95);
-  }
 
   // buttons
 
@@ -153,20 +148,10 @@ $notch-camera-background: #272727;
     transition: $animation-speed-xslow $animation-delay-short;
   }
 
-  & > .phone-body > .phone-screen:hover > .screen-view:after {
-    transform: translateY(10%) scaleX(1.4);
-    transition: $animation-speed-xslow;
-  }
-
   & > .phone-body > .phone-screen > .screen-view:before {
     transform: translateY(100%) scaleX(1.4);
     opacity: 1;
     transition: $animation-speed-xslow;
-  }
-
-  & > .phone-body > .phone-screen:hover > .screen-view:before {
-    transform: translateY(10%) scaleX(1.4);
-    transition: $animation-speed-xslow $animation-delay-short;
   }
 
   // notch
@@ -229,9 +214,44 @@ $notch-camera-background: #272727;
     transition: $animation-speed-xslow $animation-delay-short;
   }
 
-  & > .phone-body > .phone-screen:hover > .screen-view > .phone-notification {
-    transform: translateY(0%);
-    transition: $animation-speed-xslow $animation-delay-normal;
+  // animations
+
+  @media (min-width: 900px) {
+    &:hover {
+      transform: scale(0.95);
+    }
+
+    & > .phone-body > .phone-screen:hover > .screen-view:after {
+      transform: translateY(10%) scaleX(1.4);
+      transition: $animation-speed-xslow;
+    }
+
+    & > .phone-body > .phone-screen:hover > .screen-view:before {
+      transform: translateY(10%) scaleX(1.4);
+      transition: $animation-speed-xslow $animation-delay-short;
+    }
+
+    & > .phone-body > .phone-screen:hover > .screen-view > .phone-notification {
+      transform: translateY(0%);
+      transition: $animation-speed-xslow $animation-delay-normal;
+    }
+  }
+
+  @media (max-width: 900px) {
+    & > .phone-body > .phone-screen > .screen-view:after {
+      transform: translateY(10%) scaleX(1.4);
+      transition: $animation-speed-xslow;
+    }
+
+    & > .phone-body > .phone-screen > .screen-view:before {
+      transform: translateY(10%) scaleX(1.4);
+      transition: $animation-speed-xslow $animation-delay-short;
+    }
+
+    & > .phone-body > .phone-screen > .screen-view > .phone-notification {
+      transform: translateY(0%);
+      transition: $animation-speed-xslow $animation-delay-normal;
+    }
   }
 }
 </style>
