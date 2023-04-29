@@ -26,6 +26,21 @@
 <script setup lang="ts">
 import PhoneNotification from './components/phone-notification.vue';
 import PhoneClock from './components/phone-clock.vue';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  // eslint-disable-next-line no-undef
+  const phoneScreen: NodeListOf<Element> = document.querySelectorAll('.phone-screen')!;
+
+  const observer: IntersectionObserver = new IntersectionObserver(
+    (entries: IntersectionObserverEntry[]): void => {
+      entries.forEach((entry: IntersectionObserverEntry) => {
+        if (entry.isIntersecting) entry.target.classList.add('phone-screen-visible');
+      });
+    }, { threshold: 1.0 });
+
+  phoneScreen.forEach((el: Element) => observer.observe(el));
+});
 </script>
 
 <style lang="scss">
@@ -138,6 +153,9 @@ $notch-camera-background: #272727;
     gap: $spacing-24;
     padding: $spacing-32 $spacing-8;
     position: relative;
+    z-index: 1;
+    transform: translateY(120%);
+    transition: $animation-speed-xslow $animation-delay-short;
   }
 
   & > .phone-body > .phone-screen > .screen-view:after,
@@ -213,52 +231,25 @@ $notch-camera-background: #272727;
     margin-right: calc(-1 * $size-12);
   }
 
-  // notifications
+  // animations
 
-  & > .phone-body > .phone-screen > .screen-view > .phone-info {
-    z-index: 1;
-    transform: translateY(120%);
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  & > .phone-body > .phone-screen.phone-screen-visible > .screen-view:after {
+    transform: translateY(10%) scaleX(1.4);
+    transition: $animation-speed-xslow;
+  }
+
+  & > .phone-body > .phone-screen.phone-screen-visible > .screen-view:before {
+    transform: translateY(10%) scaleX(1.4);
     transition: $animation-speed-xslow $animation-delay-short;
   }
 
-  // animations
-
-  @media (min-width: 900px) {
-    &:hover {
-      transform: scale(0.95);
-    }
-
-    & > .phone-body > .phone-screen:hover > .screen-view:after {
-      transform: translateY(10%) scaleX(1.4);
-      transition: $animation-speed-xslow;
-    }
-
-    & > .phone-body > .phone-screen:hover > .screen-view:before {
-      transform: translateY(10%) scaleX(1.4);
-      transition: $animation-speed-xslow $animation-delay-short;
-    }
-
-    & > .phone-body > .phone-screen:hover > .screen-view > .phone-info {
-      transform: translateY(0%);
-      transition: $animation-speed-xslow $animation-delay-normal;
-    }
-  }
-
-  @media (max-width: 900px) {
-    & > .phone-body > .phone-screen > .screen-view:after {
-      transform: translateY(10%) scaleX(1.4);
-      transition: $animation-speed-xslow;
-    }
-
-    & > .phone-body > .phone-screen > .screen-view:before {
-      transform: translateY(10%) scaleX(1.4);
-      transition: $animation-speed-xslow $animation-delay-short;
-    }
-
-    & > .phone-body > .phone-screen > .screen-view > .phone-info {
-      transform: translateY(0%);
-      transition: $animation-speed-xslow $animation-delay-normal;
-    }
+  & > .phone-body > .phone-screen.phone-screen-visible > .screen-view > .phone-info {
+    transform: translateY(0%);
+    transition: $animation-speed-xslow $animation-delay-normal;
   }
 }
 
