@@ -1,7 +1,5 @@
 @mixin page-padding() {
-  padding-left: $spacing-32;
-  padding-right: $spacing-32;
-  padding-top: $spacing-32;
+  padding: $spacing-32;
 }
 
 @mixin header-padding() {
