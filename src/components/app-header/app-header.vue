@@ -22,6 +22,7 @@ import PagesLinksTray from './components/pages-links-tray/pages-links-tray.vue';
 .app-header {
   position: fixed;
   width: 100%;
+  z-index: 1;
 
   & > .header-area {
     @include header-padding();
