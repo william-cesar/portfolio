@@ -36,6 +36,7 @@ const pageSelected = (): void => emit('page-selected');
 .pages-links {
   display: flex;
   gap: $spacing-32;
+  height: $size-24;
 
   & > .links {
     font-family: $font-family-2;

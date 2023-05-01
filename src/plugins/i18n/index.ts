@@ -4,8 +4,8 @@ import enUS from './languages/en-US';
 
 export default createI18n({
   legacy: false,
-  locale: 'pt-BR',
-  fallbacklocale: 'en-US',
+  locale: 'pt',
+  fallbacklocale: 'en',
   messages: {
     en: enUS,
     pt: ptBR

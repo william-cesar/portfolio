@@ -1,4 +1,8 @@
 export default {
+  navbar: {
+    en: 'English',
+    pt: 'Português'
+  },
   active: 'Ativo',
   cancel: 'Cancelar',
   go_to_doc: 'Ir para documentação',
