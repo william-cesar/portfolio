@@ -1,16 +1,17 @@
-<template lang="pug">
-section.home
-  .home-info
-    h1.name Hi, I'm William! 👋
-    h2.intro Turning 
-      span.ideas ideas
-      |  into 
-      span.real-life real life
-      |  products is my thing.
-    p.description.tertiary-text I am a developer (and occasionally a content creator) based in Lavras,
-      |  Brazil, with experience in building applications for the web.
-  .phone-section
-    app-phone
+<template>
+  <section class="home">
+
+    <div class="home-info">
+      <h1 class="name"> Hi, I'm William! 👋</h1>
+      <h2 class="intro"> Turning <span class="ideas">ideas</span> into <span class="real-life">real life
+        </span> products is my thing.</h2>
+      <p class="description tertiary-text"> I am a developer (and occasionally a content creator) based in Lavras, Brazil,
+        with experience in building applications for the web.</p>
+    </div>
+    <div class="phone-section">
+      <app-phone />
+    </div>
+  </section>
 </template>
 <script setup lang="ts">
 import { AppPhone } from '@/components';
