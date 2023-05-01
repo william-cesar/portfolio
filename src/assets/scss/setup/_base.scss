@@ -27,11 +27,9 @@ body {
 .page {
   @include page-padding();
   position: absolute;
-  z-index: -2;
   inset: $size-60 0 0 0;
   height: $page-height;
   width: 100%;
-
 }
 
 hr {
