@@ -1,20 +1,23 @@
 body {
   h1 {
     font-size: $font-size-36;
-    color: $primary-color;
+    color: $secondary-color;
     font-weight: $font-weight-bold;
     font-family: $font-family-2;
+    letter-spacing: $size-1;
   }
 
   h2 {
     font-size: $font-size-24;
-    color: $secondary-color;
+    color: $primary-color;
     font-weight: $font-weight-medium;
+    letter-spacing: $size-1;
   }
 
   h3 {
     font-size: $font-size-20;
     color: $primary-color;
+    letter-spacing: $size-1;
   }
 }
 
@@ -22,11 +25,11 @@ body {
 
 .dark body {
   h1 {
-    color: $primary-color-inverse;
+    color: $secondary-color-inverse;
   }
 
   h2 {
-    color: $secondary-color-inverse;
+    color: $primary-color-inverse;
   }
 
   h3 {

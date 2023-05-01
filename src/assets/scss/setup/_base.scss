@@ -1,3 +1,6 @@
+$header-height: $size-60;
+$page-height: calc(100% - $header-height);
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +13,10 @@
 body {
   background-color: $primary-background-color;
   color: $primary-color;
+  transition: all ease $animation-speed-xslow;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 
 .dark body {
@@ -21,10 +28,18 @@ body {
   @include page-padding();
   position: absolute;
   z-index: -2;
-  inset: 0;
-  top: $spacing-60;
+  inset: $size-60 0 0 0;
+  height: $page-height;
+  width: 100%;
+
 }
 
 hr {
   border-top: $size-1 solid $secondary-color;
+}
+
+@include media-query('screen-medium') {
+  .page {
+    height: fit-content;
+  }
 }
