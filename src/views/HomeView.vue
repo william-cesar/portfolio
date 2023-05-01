@@ -1,6 +1,5 @@
 <template>
   <section class="home">
-
     <div class="home-info">
       <h1 class="name"> Hi, I'm William! 👋</h1>
       <h2 class="intro"> Turning <span class="ideas">ideas</span> into <span class="real-life">real life
@@ -13,9 +12,11 @@
     </div>
   </section>
 </template>
+
 <script setup lang="ts">
 import { AppPhone } from '@/components';
 </script>
+
 <style lang="scss">
 $spacing-minus-96: calc(-1 * $size-96);
 $purple: #8333eb 35%;
