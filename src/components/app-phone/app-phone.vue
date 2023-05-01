@@ -52,8 +52,8 @@ $notch-speaker-background: #070808;
 $notch-camera-background: #272727;
 
 .app-phone {
-  width: min(20rem, 100%);
-  height: min(40rem, 100svh);
+  width: min(20rem);
+  height: min(40rem);
   display: flex;
   position: relative;
   transition: all cubic-bezier(0.36, 0.41, 0.38, 1) $animation-delay-normal;
@@ -163,7 +163,7 @@ $notch-camera-background: #272727;
     content: "";
     position: absolute;
     @include square-element(150%);
-    background: linear-gradient(140deg, $purple-500, $purple-200, $purple-500);
+    background: linear-gradient(140deg, $purple-500 25%, $purple-200, $purple-500 75%);
     bottom: 0;
   }
 
@@ -253,7 +253,11 @@ $notch-camera-background: #272727;
   }
 }
 
-.dark .app-phone > .phone-body {
-  background-color: $white-300;
+.dark .app-phone {
+
+  & > .phone-btn,
+  & > .phone-body {
+    background-color: $white-300;
+  }
 }
 </style>

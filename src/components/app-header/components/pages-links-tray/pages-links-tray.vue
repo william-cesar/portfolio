@@ -15,8 +15,7 @@
 <script setup lang="ts">
 import ChevronDownIcon from '@/components/_icons/chevron-down-icon.vue';
 import PagesLinks from '../pages-links/pages-links.vue';
-import { computed, type ComputedRef } from 'vue';
-import { ref, type Ref } from 'vue';
+import { ref, computed, type ComputedRef, type Ref } from 'vue';
 
 const isOpen: Ref<boolean> = ref(false);
 const isTouched: Ref<boolean> = ref(false);
@@ -46,16 +45,18 @@ const trayState: ComputedRef<string> = computed(() => isOpen.value ? 'tray-open'
     padding: $spacing-16 $spacing-40;
     z-index: -1;
     isolation: isolate;
+    opacity: 0;
   }
 
   & > .tray.tray-open {
     transform: translateY($size-56);
-    transition: transform $animation-speed-xslow $animation-delay-normal;
+    opacity: 1;
+    transition: all $animation-speed-xslow $animation-delay-normal;
   }
 
   & > .tray.tray-closed.tray-touched {
     transform: translateY($size-0);
-    transition: transform $animation-speed-xslow $animation-delay-normal;
+    transition: all $animation-speed-xslow $animation-delay-normal;
   }
 
   & > .toggle-tray-button {

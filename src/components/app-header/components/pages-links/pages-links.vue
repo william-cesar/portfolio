@@ -18,11 +18,11 @@
     </RouterLink>
     <RouterLink
       class="links"
-      to="/contact"
-      title="Contact page"
+      to="/blog"
+      title="Blog page"
       @click="pageSelected"
     >
-      Contact
+      Blog
     </RouterLink>
   </nav>
 </template>

@@ -1,5 +1,6 @@
 $screen-xsmall: 376px;
 $screen-small: 539px;
+$screen-medium: 768px;
 
 
 /* --- */
@@ -9,6 +10,9 @@ $media-query-list: (
   ),
   'screen-small': (
     max-width: $screen-small,
+  ),
+  'screen-medium': (
+    max-width: $screen-medium,
   ),
 ) !default;
 

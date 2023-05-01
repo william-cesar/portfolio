@@ -1,11 +1,13 @@
 <template>
   <header class="app-header">
-    <header-title />
-    <pages-links-tray />
-    <section class="right-float">
-      <theme-switcher />
-      <pages-links />
-    </section>
+    <div class="header-area">
+      <header-title />
+      <pages-links-tray />
+      <div class="right-float">
+        <theme-switcher />
+        <pages-links />
+      </div>
+    </div>
   </header>
 </template>
 
@@ -18,38 +20,42 @@ import PagesLinksTray from './components/pages-links-tray/pages-links-tray.vue';
 
 <style lang="scss">
 .app-header {
-  @include header-padding();
-  @include centralize-vertically();
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 
-  background-color: $secondary-background-color;
-  height: $size-60;
-  justify-content: space-between;
-  position: relative;
+  & > .header-area {
+    @include header-padding();
+    @include centralize-vertically();
+    background-color: $secondary-background-color;
+    height: $header-height;
+    justify-content: space-between;
+    position: relative;
+  }
 
-  & > .pages-links-tray {
+  & > .header-area > .pages-links-tray {
     display: none;
   }
 
-  & > .right-float {
+  & > .header-area > .right-float {
     @include centralize-vertically();
     gap: $spacing-40;
   }
 }
 
-.dark .app-header {
+.dark .app-header > .header-area {
   background-color: $secondary-background-color-inverse;
 }
 
 @include media-query('screen-small') {
   .app-header {
-    & > .pages-links-tray {
+    & > .header-area > .pages-links-tray {
       display: flex;
     }
 
-    & > .right-float > .pages-links {
+    & > .header-area > .right-float > .pages-links {
       display: none;
     }
-
   }
 }
 </style>
