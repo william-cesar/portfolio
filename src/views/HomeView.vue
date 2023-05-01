@@ -1,69 +1,83 @@
-<template>
-  <section class="home">
-    <div class="home-info">
-      <h2 class="name">Hi, I'm William! 👋</h2>
-      <h3 class="presentation">I have <span class="fun">fun</span> turning ideas into <span class="real-life">real life
-        </span> products</h3>
-    </div>
-    <div class="phone-section">
-      <app-phone />
-    </div>
-  </section>
+<template lang="pug">
+section.home
+  .home-info
+    h1.name Hi, I'm William! 👋
+    h2.intro Turning 
+      span.ideas ideas
+      |  into 
+      span.real-life real life
+      |  products is my thing.
+    p.description.tertiary-text I am a developer (and occasionally a content creator) based in Lavras,
+      |  Brazil, with experience in building applications for the web.
+  .phone-section
+    app-phone
 </template>
 <script setup lang="ts">
 import { AppPhone } from '@/components';
 </script>
 <style lang="scss">
-$spacing-minus-60: calc(-1 * $spacing-60);
+$spacing-minus-96: calc(-1 * $size-96);
 $purple: #8333eb 35%;
 $blue: #048af8 65%;
 
 .home {
   @include centralize-vertically();
   justify-content: space-around;
+  height: 100%;
 
   & > .phone-section {
-    width: 100%;
-    @include centralize();
+    @include centralize-horizontally();
   }
 
   & > .home-info {
-    width: 100%;
+    width: 50%;
     display: inherit;
     flex-direction: column;
     position: relative;
+    gap: $spacing-16;
+    padding-inline: $spacing-32;
   }
 
   & > .home-info > .name {
     position: absolute;
-    top: $spacing-minus-60;
+    top: $spacing-minus-96;
     font-family: $font-family-2;
     transform: rotate(-15deg);
   }
 
-  & > .home-info > .presentation,
-  & > .home-info > .presentation > * {
+  & > .home-info > .intro,
+  & > .home-info > .intro > * {
     font-size: $size-48;
     word-break: keep-all;
     font-weight: $font-weight-bold;
+    word-spacing: $spacing-2;
   }
 
-  & > .home-info > .presentation > .fun {
+  & > .home-info > .intro > .ideas {
     color: $primary-background-color;
     -webkit-text-stroke: $size-2 $primary-text-color;
   }
 
-  & > .home-info > .presentation > .real-life {
+  & > .home-info > .intro > .real-life {
     background: linear-gradient(45deg, $black-300, $purple, $blue, $black-300);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  & > .home-info > .description {
+    line-height: $line-height-medium;
   }
 }
 
 @include media-query('screen-medium') {
   .home {
     flex-direction: column;
+    gap: $spacing-48;
+  }
+
+  .home > .home-info {
+    width: 100%;
   }
 
   .home > .home-info > .name {
@@ -74,12 +88,12 @@ $blue: #048af8 65%;
 }
 
 .dark .home {
-  & > .home-info > .presentation > .fun {
+  & > .home-info > .intro > .ideas {
     color: $primary-background-color-inverse;
     -webkit-text-stroke: $size-1 $primary-text-color-inverse;
   }
 
-  & > .home-info > .presentation > .real-life {
+  & > .home-info > .intro > .real-life {
     background: linear-gradient(45deg, $white-300, $purple, $blue, $white-300);
     background-clip: text;
     -webkit-background-clip: text;
