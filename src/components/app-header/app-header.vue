@@ -49,7 +49,7 @@ import PagesLinksTray from './components/pages-links-tray/pages-links-tray.vue';
   background-color: $secondary-background-color-inverse;
 }
 
-@include media-query('screen-small') {
+@include media-query('screen-medium') {
   .app-header {
     & > .header-area > .pages-links-tray {
       display: flex;
