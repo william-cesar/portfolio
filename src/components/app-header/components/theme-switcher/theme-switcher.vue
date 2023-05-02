@@ -1,7 +1,7 @@
 <template>
   <div
     class="theme-switcher"
-    :title="toggleMessage"
+    :title="$t(toggleMessage)"
   >
     <light-mode-icon
       v-if="isDark"
@@ -32,8 +32,8 @@ import { computed } from 'vue';
 const isDark: WritableComputedRef<boolean> = useDark();
 const changeColorMode = useToggle(isDark);
 const toggleMessage: ComputedRef<string> = computed(() => {
-  return isDark.value ? 'Switch to light mode' : 'Switch to dark mode';
-})
+  return isDark.value ? 'navbar.switch.light' : 'navbar.switch.dark';
+});
 </script>
 
 <style lang="scss">

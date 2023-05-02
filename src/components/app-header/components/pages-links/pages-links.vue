@@ -3,26 +3,23 @@
     <RouterLink
       class="links"
       to="/about"
-      title="About page"
       @click="pageSelected"
     >
-      About
+      {{ $t('pages.about') }}
     </RouterLink>
     <RouterLink
       class="links"
       to="/projects"
-      title="Projects page"
       @click="pageSelected"
     >
-      Projects
+      {{ $t('pages.projects') }}
     </RouterLink>
     <RouterLink
       class="links"
       to="/blog"
-      title="Blog page"
       @click="pageSelected"
     >
-      Blog
+      {{ $t('pages.blog') }}
     </RouterLink>
   </nav>
 </template>
@@ -42,6 +39,7 @@ const pageSelected = (): void => emit('page-selected');
     font-family: $font-family-2;
     font-size: $font-size-16;
     color: $primary-color-hover;
+    white-space: nowrap;
 
     &:hover {
       color: $primary-text-color;
