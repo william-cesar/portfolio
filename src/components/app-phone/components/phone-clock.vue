@@ -1,49 +1,28 @@
 <template>
   <div class="phone-clock">
-    <span class="current-time">{{ currentTime }}</span>
-    <span class="current-date">{{ currenDate }}</span>
+    <span class="current-time">{{ formatTimePeriod($d(currentDateTime, 'hour')) }}</span>
+    <span class="current-date">{{ capitalize($d(currentDateTime, 'date')) }}</span>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, type Ref } from 'vue';
-import type { DateFormatter } from '@/types/date-formatter';
-import { WEEKDAY, MONTH } from '@/constants/date'
 
-const date = (): DateFormatter => {
-  const date: Date = new Date();
-
-  const weekday: string = WEEKDAY[date.getDay()];
-  const month: string = MONTH[date.getMonth()];
-  const day: number = date.getDate();
-
-  const hour: number = date.getHours();
-  const rawMinutes: number = date.getMinutes();
-  const minutes: string | number = rawMinutes < 10 ? `0${rawMinutes}` : rawMinutes;
-
-  return {
-    weekday, month, day, hour, minutes
-  }
-}
-
-const formattedTime = (): string => {
-  const { hour, minutes } = date();
-
-  return `${hour}:${minutes}`
-}
-
-const formattedDate = (): string => {
-  const { weekday, month, day } = date();
-
-  return `${weekday}, ${month} ${day}`;
-}
-
-const currentTime: Ref<string> = ref(formattedTime());
-const currenDate: Ref<string> = ref(formattedDate());
+const currentDateTime: Ref<Date> = ref(new Date());
 
 setInterval(() => {
-  currentTime.value = formattedTime();
+  currentDateTime.value = new Date();
 }, 1000);
+
+const capitalize = (value: string): string => {
+  const capitalizeFirstLetter = value.charAt(0).toUpperCase();
+  return `${capitalizeFirstLetter}${value.substring(1)}`;
+}
+
+const formatTimePeriod = (value: string): string => {
+  const split = value.split(' ');
+  return split[0];
+}
 </script>
 
 <style lang="scss">

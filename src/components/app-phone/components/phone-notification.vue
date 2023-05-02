@@ -12,9 +12,9 @@
         alt="linkedin-icon"
       >
       <section class="notification-info">
-        <span class="notification-title">LinkedIn</span>
+        <span class="notification-title">{{ $t('phone.social.linkedin.label') }}</span>
         <p class="notification-description">
-          Visit my profile and see my professional acomplishments.
+          {{ $t('phone.social.linkedin.description') }}
         </p>
       </section>
     </a>
@@ -30,9 +30,9 @@
         alt="github-icon"
       >
       <section class="notification-info">
-        <span class="notification-title">GitHub</span>
+        <span class="notification-title">{{ $t('phone.social.github.label') }}</span>
         <p class="notification-description">
-          Take a look at other projects and how I write my code.
+          {{ $t('phone.social.github.description') }}
         </p>
       </section>
     </a>
@@ -48,18 +48,14 @@
         alt="gmail-icon"
       >
       <section class="notification-info">
-        <span class="notification-title">Mail</span>
+        <span class="notification-title">{{ $t('phone.social.mail.label') }}</span>
         <p class="notification-description">
-          Send me a mail. Let's have a conversation.
+          {{ $t('phone.social.mail.description') }}
         </p>
       </section>
     </a>
   </div>
 </template>
-
-<script setup lang="ts">
-
-</script>
 
 <style lang="scss">
 .phone-notification {

@@ -4,6 +4,7 @@
       <header-title />
       <pages-links-tray />
       <div class="right-float">
+        <locale-change />
         <theme-switcher />
         <pages-links />
       </div>
@@ -12,6 +13,7 @@
 </template>
 
 <script setup>
+import LocaleChange from './components/locale-change/locale-change.vue';
 import ThemeSwitcher from './components/theme-switcher/theme-switcher.vue';
 import PagesLinks from './components/pages-links/pages-links.vue';
 import HeaderTitle from './components/header-title/header-title.vue';
@@ -47,7 +49,7 @@ import PagesLinksTray from './components/pages-links-tray/pages-links-tray.vue';
   background-color: $secondary-background-color-inverse;
 }
 
-@include media-query('screen-small') {
+@include media-query('screen-medium') {
   .app-header {
     & > .header-area > .pages-links-tray {
       display: flex;

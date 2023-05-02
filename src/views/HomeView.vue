@@ -1,11 +1,15 @@
 <template>
   <section class="home">
     <div class="home-info">
-      <h1 class="name"> Hi, I'm William! 👋</h1>
-      <h2 class="intro"> Turning <span class="ideas">ideas</span> into <span class="real-life">real life
-        </span> products is my thing.</h2>
-      <p class="description tertiary-text"> I am a developer (and occasionally a content creator) based in Lavras, Brazil,
-        with experience in building applications for the web.</p>
+      <h1 class="name">{{ $t('presentation.name') }}</h1>
+      <h2 class="intro">
+        {{ $t('presentation.intro.p1') }}
+        <span class="ideas">{{ $t('presentation.intro.p2') }}</span>
+        {{ $t('presentation.intro.p3') }}
+        <span class="real-life">{{ $t('presentation.intro.p4') }}</span>
+        {{ $t('presentation.intro.p5') }}
+      </h2>
+      <p class="description tertiary-text">{{ $t('presentation.description') }}</p>
     </div>
     <div class="phone-section">
       <app-phone />
@@ -21,23 +25,27 @@ import { AppPhone } from '@/components';
 $spacing-minus-96: calc(-1 * $size-96);
 $purple: #8333eb 35%;
 $blue: #048af8 65%;
+$max-home-width: calc(1400px - $size-64);
+$max-info-width: 600px;
 
 .home {
   @include centralize-vertically();
   justify-content: space-around;
   height: 100%;
+  max-width: $max-home-width;
+  margin-inline: auto;
+  gap: $spacing-32;
 
   & > .phone-section {
     @include centralize-horizontally();
   }
 
   & > .home-info {
-    width: 50%;
+    max-width: $max-info-width;
     display: inherit;
     flex-direction: column;
     position: relative;
     gap: $spacing-16;
-    padding-inline: $spacing-32;
   }
 
   & > .home-info > .name {

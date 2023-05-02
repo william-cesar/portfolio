@@ -14,7 +14,7 @@
       class="download-cv-btn"
       @click="downloadResume"
     ><download-file-icon />
-      <span>Download CV</span>
+      <span>{{ $t('download') }}</span>
     </button>
   </div>
 </template>
@@ -25,11 +25,13 @@ import VuePdfEmbed from 'vue-pdf-embed';
 import notifier from '@/plugins/notifier';
 import DownloadFileIcon from '@/components/_icons/download-file-icon.vue';
 import Resume from '@/assets/files/pdf/Resume.pdf';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const displayComponent: Ref<boolean> = ref(true);
-
 const loadingFailed = () => {
-  notifier.error('Error while rendering the file. Please try again later.');
+  notifier.error(t('errors.file_render'));
   displayComponent.value = false;
 }
 
@@ -48,7 +50,7 @@ const downloadResume = (): void => {
     document.body.removeChild(link);
 
   } catch {
-    notifier.error('The file could not be downloaded. Please try again later.');
+    notifier.error(t('errors.file_download'));
   }
 }
 </script>

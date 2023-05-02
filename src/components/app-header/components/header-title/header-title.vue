@@ -2,7 +2,7 @@
   <RouterLink
     class="header-title"
     to="/"
-    title="Home"
+    :title="$t('pages.home')"
   >
     William.dev
   </RouterLink>
