@@ -23,8 +23,8 @@ const isTouched: Ref<boolean> = ref(false);
 const toggleTray = (): void => {
   isOpen.value = !isOpen.value;
   isTouched.value = true;
-}
-const trayState: ComputedRef<string> = computed(() => isOpen.value ? 'tray-open' : 'tray-closed')
+};
+const trayState: ComputedRef<string> = computed(() => (isOpen.value ? 'tray-open' : 'tray-closed'));
 </script>
 
 <style lang="scss">

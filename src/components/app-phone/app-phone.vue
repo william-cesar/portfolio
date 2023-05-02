@@ -37,7 +37,9 @@ onMounted(() => {
       entries.forEach((entry: IntersectionObserverEntry) => {
         if (entry.isIntersecting) entry.target.classList.add('phone-screen-visible');
       });
-    }, { threshold: 1.0 });
+    },
+    { threshold: 1.0 }
+  );
 
   phoneScreen.forEach((el: Element) => observer.observe(el));
 });
@@ -77,7 +79,7 @@ $notch-camera-background: #272727;
   }
 
   & > .phone-btn.left-btn {
-    left: 0
+    left: 0;
   }
 
   & > .phone-btn.left-btn.top-left-btn {
@@ -98,7 +100,7 @@ $notch-camera-background: #272727;
     height: $size-80;
   }
 
-  // body 
+  // body
 
   & > .phone-body {
     flex: 1;
@@ -124,7 +126,7 @@ $notch-camera-background: #272727;
   }
 
   & > .phone-body > .phone-antenna.antenna-bottom {
-    top: 90%
+    top: 90%;
   }
 
   // screen
@@ -160,7 +162,7 @@ $notch-camera-background: #272727;
 
   & > .phone-body > .phone-screen > .screen-view:after,
   & > .phone-body > .phone-screen > .screen-view:before {
-    content: "";
+    content: '';
     position: absolute;
     @include square-element(150%);
     background: linear-gradient(140deg, $purple-500 25%, $purple-200, $purple-500 75%);
@@ -194,7 +196,7 @@ $notch-camera-background: #272727;
 
   & > .phone-body > .phone-screen > .phone-notch::after,
   & > .phone-body > .phone-screen > .phone-notch::before {
-    content: "";
+    content: '';
     width: 10%;
     height: 50%;
     position: absolute;

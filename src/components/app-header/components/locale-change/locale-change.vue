@@ -20,7 +20,7 @@ import i18n from '@/plugins/i18n';
 
 const setLocale = (locale: 'en' | 'pt'): void => {
   i18n.global.locale.value = locale;
-}
+};
 </script>
 
 <style lang="scss">

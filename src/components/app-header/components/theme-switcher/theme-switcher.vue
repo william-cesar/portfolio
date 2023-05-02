@@ -12,7 +12,7 @@
         type="checkbox"
         :checked="isDark"
         @change="changeColorMode()"
-      >
+      />
       <span class="slider round" />
     </label>
     <dark-mode-icon
@@ -67,7 +67,7 @@ const toggleMessage: ComputedRef<string> = computed(() => {
   & > .slider:before {
     @include square-element($size-16);
     position: absolute;
-    content: "";
+    content: '';
     left: $spacing-0;
     bottom: $spacing-0;
     background-color: $secondary-color-inverse;

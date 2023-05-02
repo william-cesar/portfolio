@@ -17,12 +17,12 @@ setInterval(() => {
 const capitalize = (value: string): string => {
   const capitalizeFirstLetter = value.charAt(0).toUpperCase();
   return `${capitalizeFirstLetter}${value.substring(1)}`;
-}
+};
 
 const formatTimePeriod = (value: string): string => {
   const split = value.split(' ');
   return split[0];
-}
+};
 </script>
 
 <style lang="scss">

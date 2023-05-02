@@ -1,4 +1,3 @@
-
 <template>
   <svg
     class="download-file-icon"
