@@ -3,9 +3,7 @@
     class="header-title"
     to="/"
     :title="$t('pages.home')"
-  >
-    William.dev
-  </RouterLink>
+  >William.dev</RouterLink>
 </template>
 
 <style lang="scss">

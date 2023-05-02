@@ -13,7 +13,8 @@
     <button
       class="download-cv-btn"
       @click="downloadResume"
-    ><download-file-icon />
+    >
+      <download-file-icon />
       <span>{{ $t('download') }}</span>
     </button>
   </div>
@@ -33,26 +34,25 @@ const displayComponent: Ref<boolean> = ref(true);
 const loadingFailed = () => {
   notifier.error(t('errors.file_render'));
   displayComponent.value = false;
-}
+};
 
 const renderFinish = () => {
   notifier.clearAll();
   displayComponent.value = true;
-}
+};
 
 const downloadResume = (): void => {
   try {
     const link = document.createElement('a');
     link.href = Resume;
-    link.download = "William_Cesar_Resume.pdf";
+    link.download = 'William_Cesar_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-
   } catch {
     notifier.error(t('errors.file_download'));
   }
-}
+};
 </script>
 
 <style lang="scss">

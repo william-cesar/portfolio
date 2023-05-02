@@ -10,7 +10,7 @@
         class="notification-icon"
         src="@/assets/files/png/linkedin.png"
         alt="linkedin-icon"
-      >
+      />
       <section class="notification-info">
         <span class="notification-title">{{ $t('phone.social.linkedin.label') }}</span>
         <p class="notification-description">
@@ -28,7 +28,7 @@
         class="notification-icon"
         src="@/assets/files/png/github.png"
         alt="github-icon"
-      >
+      />
       <section class="notification-info">
         <span class="notification-title">{{ $t('phone.social.github.label') }}</span>
         <p class="notification-description">
@@ -46,7 +46,7 @@
         class="notification-icon"
         src="@/assets/files/png/gmail.png"
         alt="gmail-icon"
-      >
+      />
       <section class="notification-info">
         <span class="notification-title">{{ $t('phone.social.mail.label') }}</span>
         <p class="notification-description">
