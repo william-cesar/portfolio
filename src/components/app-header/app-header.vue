@@ -29,7 +29,7 @@ import PagesLinksTray from './components/pages-links-tray/pages-links-tray.vue';
   & > .header-area {
     @include header-padding();
     @include centralize-vertically();
-    background-color: $secondary-background-color;
+    background-color: $purple-200;
     height: $header-height;
     justify-content: space-between;
     position: relative;
@@ -43,10 +43,6 @@ import PagesLinksTray from './components/pages-links-tray/pages-links-tray.vue';
     @include centralize-vertically();
     gap: $spacing-40;
   }
-}
-
-.dark .app-header > .header-area {
-  background-color: $secondary-background-color-inverse;
 }
 
 @include media-query('screen-medium') {

@@ -79,7 +79,7 @@
   }
 
   & > .notification-link > .notification-info {
-    color: $primary-text-color;
+    color: $black-300;
     line-height: 115%;
   }
 

@@ -21,6 +21,44 @@
 
   --red-100: #fa3b2e;
   --red-200: #b62711;
+
+  --primary-background-color: var(--white-200);
+  --secondary-background-color: var(--white-100);
+
+  --primary-color: var(--black-400);
+  --secondary-color: var(--purple-400);
+  --tertiary-color: var(--gray-200);
+
+  --primary-text-color: var(--black-300);
+  --secondary-text-color: var(--purple-200);
+  --tertiary-text-color: var(--gray-400);
+
+  --primary-color-hover: var(--black-500);
+  --secondary-color-hover: var(--purple-500);
+  --tertiary-color-hover: var(--gray-500);
+
+  --success-color: var(--green-100);
+  --success-color-hover: var(--green-200);
+
+  --error-color: var(--red-100);
+  --error-color-hover: var(--red-200);
+}
+
+:root.dark {
+  --primary-background-color: var(--black-400);
+  --secondary-background-color: var(--purple-400);
+  
+  --primary-color: var(--white-200);
+  --secondary-color: var(--purple-500);
+  --tertiary-color: var(--gray-200);
+  
+  --primary-text-color: var(--white-200);
+  --secondary-text-color: var(--purple-400);
+  --tertiary-text-color: var(--gray-400);
+  
+  --primary-color-hover: var(--white-300);
+  --secondary-color-hover: var(--purple-200);
+  --tertiary-color-hover: var(--gray-500);
 }
 
 $white-100: var(--white-100);
@@ -46,40 +84,23 @@ $green-200: var(--green-200);
 $red-100: var(--red-100);
 $red-200: var(--red-200);
 
-$primary-background-color: $white-200;
-$secondary-background-color: $white-100;
+$primary-background-color: var(--primary-background-color);
+$secondary-background-color: var(--secondary-background-color);
 
-$primary-color: $black-400;
-$secondary-color: $purple-400;
-$tertiary-color: $gray-200;
+$primary-color: var(--primary-color);
+$secondary-color: var(--secondary-color);
+$tertiary-color: var(--tertiary-color);
 
-$primary-text-color: $black-300;
-$secondary-text-color: $purple-200;
-$tertiary-text-color: $gray-400;
+$primary-text-color: var(--primary-text-color);
+$secondary-text-color: var(--secondary-text-color);
+$tertiary-text-color: var(--tertiary-text-color);
 
-$primary-color-hover: $black-500;
-$secondary-color-hover: $purple-500;
-$tertiary-color-hover: $gray-500;
+$primary-color-hover: var(--primary-color-hover);
+$secondary-color-hover: var(--secondary-color-hover);
+$tertiary-color-hover: var(--tertiary-color-hover);
 
-$success-color: $green-100;
-$success-color-hover: $green-200;
+$success-color: var(--success-color);
+$success-color-hover: var(--success-color-hover);
 
-$error-color: $red-100;
-$error-color-hover: $red-200;
-
-// DARK MODE
-
-$primary-background-color-inverse: $black-400;
-$secondary-background-color-inverse: $purple-400;
-
-$primary-color-inverse: $white-200;
-$secondary-color-inverse: $purple-500;
-$tertiary-color-inverse: $gray-200;
-
-$primary-text-color-inverse: $white-200;
-$secondary-text-color-inverse: $purple-400;
-$tertiary-text-color-inverse: $gray-400;
-
-$primary-color-hover-inverse: $white-300;
-$secondary-color-hover-inverse: $purple-200;
-$tertiary-color-hover-inverse: $gray-500;
+$error-color: var(--error-color);
+$error-color-hover: var(--error-color-hover);

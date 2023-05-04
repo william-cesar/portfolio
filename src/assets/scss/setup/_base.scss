@@ -1,4 +1,4 @@
-$header-height: $size-60;
+$header-height: $size-64;
 $page-height: calc(100% - $header-height);
 
 * {
@@ -19,15 +19,10 @@ body {
   width: 100vw;
 }
 
-.dark body {
-  background-color: $primary-background-color-inverse;
-  color: $primary-color-inverse;
-}
-
 .page {
   @include page-padding();
   position: absolute;
-  inset: $size-60 0 0 0;
+  inset: $header-height 0 0 0;
   height: $page-height;
   width: 100%;
 }

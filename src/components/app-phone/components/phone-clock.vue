@@ -31,7 +31,7 @@ const formatTimePeriod = (value: string): string => {
   flex-direction: column;
   z-index: 1;
   padding-top: $spacing-32;
-  color: $primary-text-color-inverse;
+  color: $white-200;
 
   & > .current-time {
     font-size: $size-56;
