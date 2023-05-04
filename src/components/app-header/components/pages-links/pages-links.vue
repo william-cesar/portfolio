@@ -38,34 +38,19 @@ const pageSelected = (): void => emit('page-selected');
   & > .links {
     font-family: $font-family-2;
     font-size: $font-size-16;
-    color: $primary-color-hover;
+    color: $black-300;
     white-space: nowrap;
+    letter-spacing: $size-1;
 
     &:hover {
       color: $primary-text-color;
+      transform: scale(1.1);
+      transition: transform $animation-speed-slow;
     }
 
-    &.router-link-active,
-    &.router-link-active:hover {
-      border-bottom: $size-1 solid $primary-color-hover;
-      color: $primary-color-hover;
+    &.router-link-active {
+      border-bottom: $size-1 solid $black-300;
     }
-  }
-}
-
-.dark .pages-links {
-  & > .links {
-    color: $primary-color-inverse;
-
-    &.router-link-active,
-    &.router-link-active:hover {
-      border-bottom-color: $primary-text-color-inverse;
-      color: $primary-text-color-inverse;
-    }
-  }
-
-  & > .links:hover {
-    color: $primary-color-hover-inverse;
   }
 }
 </style>

@@ -39,10 +39,10 @@ const trayState: ComputedRef<string> = computed(() => (isOpen.value ? 'tray-open
     position: absolute;
     background-color: $secondary-background-color;
     box-shadow: $size-0 $size-0 $size-2 $tertiary-color;
-    border-top: $size-1 solid $primary-color-inverse;
+    border-top: $size-1 solid $tertiary-color;
     border-radius: $size-0 $size-0 $size-5 $size-5;
     top: calc(-1 * $spacing-40);
-    padding: $spacing-16 $spacing-40;
+    padding: $spacing-24 $spacing-40;
     z-index: -1;
     isolation: isolate;
     opacity: 0;
@@ -51,7 +51,9 @@ const trayState: ComputedRef<string> = computed(() => (isOpen.value ? 'tray-open
   & > .tray.tray-open {
     transform: translateY($size-56);
     opacity: 1;
-    transition: all $animation-speed-xslow $animation-delay-normal;
+    transition:
+      transform $animation-speed-xslow $animation-delay-normal,
+      opacity $animation-speed-xslow $animation-delay-normal;
   }
 
   & > .tray.tray-closed.tray-touched {
@@ -62,7 +64,7 @@ const trayState: ComputedRef<string> = computed(() => (isOpen.value ? 'tray-open
   & > .toggle-tray-button {
     @include circle-element($size-32);
     @include centralize();
-    padding: $spacing-0;
+    padding: $spacing-8 $spacing-0 $spacing-0;
     background-color: transparent;
     animation: bounce $animation-speed-xslow $animation-delay-long 3 forwards;
   }
@@ -75,14 +77,6 @@ const trayState: ComputedRef<string> = computed(() => (isOpen.value ? 'tray-open
   & > .toggle-tray-button > .tray-open {
     transform: rotate(180deg);
     transition: transform $animation-speed-medium $animation-delay-normal;
-  }
-}
-
-.dark .pages-links-tray {
-  & > .tray {
-    background-color: $secondary-background-color-inverse;
-    box-shadow: $size-0 $size-0 $size-2 $primary-color-inverse;
-    border-top: $size-1 solid $secondary-color-inverse;
   }
 }
 

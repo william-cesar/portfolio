@@ -37,24 +37,3 @@ body {
     }
   }
 }
-
-// DARK MODE
-
-.dark body {
-  p.primary-text {
-    color: $primary-text-color-inverse;
-  }
-
-  p.secondary-text {
-    color: $secondary-text-color-inverse;
-  }
-
-  p.tertiary-text,
-  span.muted-text {
-    color: $tertiary-text-color-inverse;
-  }
-
-  span.info-text {
-    color: $secondary-text-color-inverse;
-  }
-}

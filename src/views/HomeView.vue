@@ -1,14 +1,13 @@
 <template>
   <section class="home">
     <div class="home-info">
-      <h1 class="name">{{ $t('presentation.name') }}</h1>
-      <h2 class="intro">
+      <h1 class="intro">
         {{ $t('presentation.intro.p1') }}
         <span class="ideas">{{ $t('presentation.intro.p2') }}</span>
         {{ $t('presentation.intro.p3') }}
         <span class="real-life">{{ $t('presentation.intro.p4') }}</span>
         {{ $t('presentation.intro.p5') }}
-      </h2>
+      </h1>
       <p class="description tertiary-text">{{ $t('presentation.description') }}</p>
     </div>
     <div class="phone-section">
@@ -48,13 +47,6 @@ $max-info-width: 600px;
     gap: $spacing-16;
   }
 
-  & > .home-info > .name {
-    position: absolute;
-    top: $spacing-minus-96;
-    font-family: $font-family-2;
-    transform: rotate(-15deg);
-  }
-
   & > .home-info > .intro,
   & > .home-info > .intro > * {
     font-size: $size-48;
@@ -65,7 +57,7 @@ $max-info-width: 600px;
 
   & > .home-info > .intro > .ideas {
     color: $primary-background-color;
-    -webkit-text-stroke: $size-2 $primary-text-color;
+    -webkit-text-stroke: $size-1 $primary-text-color;
   }
 
   & > .home-info > .intro > .real-life {
@@ -89,20 +81,9 @@ $max-info-width: 600px;
   .home > .home-info {
     width: 100%;
   }
-
-  .home > .home-info > .name {
-    position: relative;
-    top: 0;
-    transform: rotate(0deg);
-  }
 }
 
 .dark .home {
-  & > .home-info > .intro > .ideas {
-    color: $primary-background-color-inverse;
-    -webkit-text-stroke: $size-1 $primary-text-color-inverse;
-  }
-
   & > .home-info > .intro > .real-life {
     background: linear-gradient(45deg, $white-300, $purple, $blue, $white-300);
     background-clip: text;

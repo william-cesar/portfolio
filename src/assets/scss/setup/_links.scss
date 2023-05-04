@@ -18,19 +18,3 @@ body {
     }
   }
 }
-
-// DARK MODE
-
-.dark body {
-  a {
-    color: $secondary-text-color-inverse;
-
-    &:hover:not(:disabled) {
-      color: $secondary-color-hover-inverse;
-    }
-
-    &:disabled {
-      color: $tertiary-text-color-inverse;
-    }
-  }
-}

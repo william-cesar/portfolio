@@ -37,6 +37,9 @@ const toggleMessage: ComputedRef<string> = computed(() => {
 </script>
 
 <style lang="scss">
+$slider-color: $purple-500;
+$slider-background: $white-200;
+
 .theme-switcher {
   display: flex;
   gap: $spacing-8;
@@ -58,10 +61,10 @@ const toggleMessage: ComputedRef<string> = computed(() => {
     position: absolute;
     cursor: pointer;
     inset: $spacing-0;
-    background-color: $primary-color-inverse;
+    background-color: $slider-background;
     -webkit-transition: $animation-speed-slow;
     transition: $animation-speed-slow;
-    box-shadow: $size-0 $size-0 $size-2 $secondary-color;
+    box-shadow: $size-0 $size-0 $size-2 $slider-background;
   }
 
   & > .slider:before {
@@ -70,7 +73,7 @@ const toggleMessage: ComputedRef<string> = computed(() => {
     content: '';
     left: $spacing-0;
     bottom: $spacing-0;
-    background-color: $secondary-color-inverse;
+    background-color: $slider-color;
     -webkit-transition: $animation-speed-slow;
     transition: $animation-speed-slow;
   }
@@ -84,18 +87,12 @@ const toggleMessage: ComputedRef<string> = computed(() => {
   }
 
   & > input:checked + .slider {
-    background-color: $primary-color-inverse;
+    background-color: $slider-background;
   }
 
   & > input:checked + .slider:before {
-    background-color: $primary-color;
+    background-color: $slider-color;
     transform: translateX($spacing-16);
-  }
-}
-
-.dark .theme-switcher {
-  & > .toggle > .slider {
-    box-shadow: $size-0 $size-0 $size-2 $primary-color-inverse;
   }
 }
 </style>

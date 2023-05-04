@@ -5,6 +5,11 @@ body {
     font-weight: $font-weight-bold;
     font-family: $font-family-2;
     letter-spacing: $size-1;
+
+    &.intro {
+      font-family: $font-family-1;
+      color: $primary-color;
+    }
   }
 
   h2 {
@@ -18,21 +23,5 @@ body {
     font-size: $font-size-20;
     color: $primary-color;
     letter-spacing: $size-1;
-  }
-}
-
-// DARK MODE
-
-.dark body {
-  h1 {
-    color: $secondary-color-inverse;
-  }
-
-  h2 {
-    color: $primary-color-inverse;
-  }
-
-  h3 {
-    color: $primary-color-inverse;
   }
 }

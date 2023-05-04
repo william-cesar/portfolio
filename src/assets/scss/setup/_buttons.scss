@@ -28,30 +28,3 @@ button {
     color: $tertiary-text-color;
   }
 }
-
-// DARK MODE
-
-.dark button {
-  &.btn-primary {
-    background-color: $secondary-color-inverse;
-    color: $primary-text-color-inverse;
-
-    &:hover:not(:disabled) {
-      background-color: $secondary-color-hover-inverse;
-    }
-  }
-
-  &.btn-secondary {
-    background-color: $primary-color-inverse;
-    color: $secondary-text-color-inverse;
-
-    &:hover:not(:disabled) {
-      background-color: $primary-color-hover-inverse;
-    }
-  }
-
-  &:disabled {
-    background-color: $tertiary-color-inverse;
-    color: $tertiary-text-color-inverse;
-  }
-}

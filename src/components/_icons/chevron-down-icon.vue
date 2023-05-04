@@ -15,16 +15,10 @@
 
 <style lang="scss">
 .chevron-down-icon {
-  @include square-element($size-32);
+  @include circle-element($size-32);
 
   & > path {
-    fill: $secondary-color-hover;
-  }
-}
-
-.dark .chevron-down-icon {
-  & > path {
-    fill: $primary-color-hover-inverse;
+    fill: $purple-500;
   }
 }
 </style>
