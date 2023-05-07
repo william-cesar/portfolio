@@ -17,7 +17,7 @@ export default {
     social: {
       linkedin: {
         label: 'LinkedIn',
-        description: 'Visit my profile and see my professional acomplishments.'
+        description: 'Visit my profile and see my professional accomplishments.'
       },
       github: {
         label: 'GitHub',
@@ -67,9 +67,9 @@ export default {
       activities: {
         activity_1: 'Developed and maintained major features in both mobile and web applications.',
         activity_2:
-          'Proposed and performed quality assurance tests on variuos modules to ensure quality, browser compatibility and mobile responsiveness.',
+          'Proposed and performed quality assurance tests on various modules to ensure quality, browser compatibility and mobile responsiveness.',
         activity_3:
-          'Worked in high-demand applications from such clients as Munich RE, the Government of Pará, the Ministry of Agriculture, and the Brazilian Federal Revenue Office'
+          'Worked in high-demand applications from clients such as Munich RE, the Government of Pará, the Ministry of Agriculture, and the Brazilian Federal Revenue Office.'
       },
       main_techs: {
         tech_1: 'React',
@@ -94,7 +94,7 @@ export default {
           'Work alongside technical leadership to create and improve documentation of processes.',
         activity_4:
           'Collaborate with designers to transform creative concepts into real-life solutions for clients and stakeholders.',
-        activity_5: 'Share technical and process knowledge with members of my own and other teams.'
+        activity_5: 'Share technical and process knowledge across multiple teams, including my own.'
       },
       main_techs: {
         tech_1: 'Vue 3',
