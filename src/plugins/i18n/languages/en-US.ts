@@ -35,7 +35,6 @@ export default {
     file_render: 'Error while rendering the file. Please try again later.'
   },
   presentation: {
-    name: "Hi, I'm William! 👋",
     intro: {
       p1: 'Turning',
       p2: 'ideas',
@@ -45,5 +44,68 @@ export default {
     },
     description:
       'I am a developer (and occasionally write about tech) with experience in building applications for the web.'
-  }
+  },
+  work_experience: {
+    uptime: {
+      company: 'Uptime Consultants',
+      position: 'Freelancer',
+      period: 'January 2020 - July 2020',
+      activities: {
+        activity_1:
+          "Planned, executed, and maintained a desktop application to control students' registration and booking of interviews in the commercial sector of an English school in the city of Lavras - Brazil."
+      },
+      main_techs: {
+        tech_1: 'Python',
+        tech_2: 'Tkinter',
+        tech_3: 'SQLite'
+      }
+    },
+    youx: {
+      company: 'YouX Group',
+      position: 'Software Analyst',
+      period: 'August 2020 - December 2021',
+      activities: {
+        activity_1: 'Developed and maintained major features in both mobile and web applications.',
+        activity_2:
+          'Proposed and performed quality assurance tests on variuos modules to ensure quality, browser compatibility and mobile responsiveness.',
+        activity_3:
+          'Worked in high-demand applications from such clients as Munich RE, the Government of Pará, the Ministry of Agriculture, and the Brazilian Federal Revenue Office'
+      },
+      main_techs: {
+        tech_1: 'React',
+        tech_2: 'React Native',
+        tech_3: 'Vue 2',
+        tech_4: 'Angular 2',
+        tech_5: 'Spring Boot',
+        tech_6: 'PostgreSQL',
+        tech_7: 'Jest',
+        tech_8: 'Jasmine'
+      }
+    },
+    azion: {
+      company: 'Azion Technologies',
+      position: 'Software Engineer',
+      period: 'December 2021 - Present',
+      activities: {
+        activity_1:
+          "Deliver high-quality, production ready code for a diverse array of projects related to Azion's high-demand platform.",
+        activity_2: 'Write thoughtful and quality-driven tests on several internal projects.',
+        activity_3:
+          'Work alongside technical leadership to create and improve documentation of processes.',
+        activity_4:
+          'Collaborate with designers to transform creative concepts into real-life solutions for clients and stakeholders.',
+        activity_5: 'Share technical and process knowledge with members of my own and other teams.'
+      },
+      main_techs: {
+        tech_1: 'Vue 3',
+        tech_2: 'Jest',
+        tech_3: 'Storybook',
+        tech_4: 'Docker',
+        tech_5: 'Cypress',
+        tech_6: 'Django',
+        tech_7: 'PostgreSQL'
+      }
+    }
+  },
+  main_techs: 'Main techologies'
 };
