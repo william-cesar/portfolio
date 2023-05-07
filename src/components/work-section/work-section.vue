@@ -17,11 +17,14 @@
         class="card"
         ref="jobCard"
       >
-        <h4 class="job-name card-title">{{ $t(selectedJob.position) }} @ <a
+        <h4 class="job-name card-title">{{ $t(selectedJob.position) }} @
+          <a
             :href="selectedJob.companyLink"
             target="_blank"
             rel="noopener noreferrer"
-          >{{ $t(selectedJob.name) }}</a>
+          >
+            {{ $t(selectedJob.name) }}
+          </a>
         </h4>
         <span class="job-period muted-text">{{ $t(selectedJob.period) }}</span>
         <ul
@@ -57,13 +60,12 @@ const selectJob = (job: Job, buttonIndex: number): void => {
     const buttons = (jobButton.value as NodeListOf<HTMLButtonElement>);
     buttons.forEach((button) => button.disabled = true);
 
-    buttons[buttonIndex].scrollIntoView({ behavior: "smooth" });
+    buttons[buttonIndex].scrollIntoView({ behavior: 'smooth' });
 
     setTimeout(() => {
       (jobCard.value as HTMLDivElement).classList.remove('flip-card');
       buttons.forEach((button) => button.disabled = false);
     }, (500));
-
   };
 };
 </script>
