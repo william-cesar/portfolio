@@ -3,16 +3,12 @@ import enUS from '@/plugins/i18n/languages/en-US';
 
 const infoList = (company: keyof typeof enUS.work_experience): string[] => {
   const keys: string[] = Object.keys(enUS.work_experience[company].activities);
-  return keys.map((key) => {
-    return `work_experience.${company}.activities.${key}`;
-  });
+  return keys.map((key) => `work_experience.${company}.activities.${key}`);
 };
 
 const techList = (company: keyof typeof enUS.work_experience): string[] => {
   const keys: string[] = Object.keys(enUS.work_experience[company].main_techs);
-  return keys.map((key) => {
-    return `work_experience.${company}.main_techs.${key}`;
-  });
+  return keys.map((key) => `work_experience.${company}.main_techs.${key}`);
 };
 
 const JobsList: Job[] = [
