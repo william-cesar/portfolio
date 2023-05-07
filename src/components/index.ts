@@ -1,7 +1,10 @@
-import AppHeader from './app-header/app-header.vue';
-import AppPhone from './app-phone/app-phone.vue';
-import AppTag from './app-tag/app-tag.vue';
-import PdfPreviewer from './pdf-previewer/pdf-previewer.vue';
-import WorkSection from './work-section/work-section.vue';
+// Base components
+import AppHeader from './base/app-header/app-header.vue';
+import AppPhone from './base/app-phone/app-phone.vue';
+import AppTag from './base/app-tag/app-tag.vue';
+import PdfPreviewer from './base/pdf-previewer/pdf-previewer.vue';
+
+// Section components
+import WorkSection from './section/work-section/work-section.vue';
 
 export { AppHeader, AppPhone, AppTag, PdfPreviewer, WorkSection };

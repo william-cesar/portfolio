@@ -43,7 +43,6 @@ const pageSelected = (): void => emit('page-selected');
     letter-spacing: $size-1;
 
     &:hover {
-      color: $primary-text-color;
       transform: scale(1.1);
       transition: transform $animation-speed-slow;
     }

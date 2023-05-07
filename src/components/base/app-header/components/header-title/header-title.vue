@@ -14,5 +14,10 @@
   font-size: $font-size-24;
   color: $white-200;
   -webkit-text-stroke: $size-1 $black-400;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform $animation-speed-slow;
+  }
 }
 </style>
