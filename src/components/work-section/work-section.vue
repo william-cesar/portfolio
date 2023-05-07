@@ -14,28 +14,42 @@
     </div>
     <div class="jobs-info">
       <div
-        class="card"
+        class="card job-card"
         ref="jobCard"
       >
-        <h4 class="job-name card-title">{{ $t(selectedJob.position) }} @
-          <a
-            :href="selectedJob.companyLink"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div class="content">
+          <h4 class="job-name card-title">{{ $t(selectedJob.position) }} @
+            <a
+              :href="selectedJob.companyLink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ $t(selectedJob.name) }}
+            </a>
+          </h4>
+          <span class="job-period muted-text">{{ $t(selectedJob.period) }}</span>
+          <ul
+            class="job-description card-content"
+            v-for="(activity, idx) in selectedJob.info"
+            :key="idx"
           >
-            {{ $t(selectedJob.name) }}
-          </a>
-        </h4>
-        <span class="job-period muted-text">{{ $t(selectedJob.period) }}</span>
-        <ul
-          class="job-description card-content"
-          v-for="(activity, idx) in selectedJob.info"
-          :key="idx"
-        >
-          <li class="activity">
-            {{ $t(activity) }}
-          </li>
-        </ul>
+            <li class="activity">
+              {{ $t(activity) }}
+            </li>
+          </ul>
+          <span class="muted-text">{{ $t('main_techs') }}</span>
+          <div class="techs">
+            <template
+              v-for="(tech, idx) in selectedJob.mainTechs"
+              :key="idx"
+            >
+              <app-tag
+                :label="tech.label"
+                :color="tech.color"
+              />
+            </template>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -45,6 +59,7 @@
 import { ref, type Ref } from 'vue';
 import type Job from '@/types/job';
 import JobsList from './jobs-list';
+import AppTag from '../app-tag/app-tag.vue';
 
 const jobCard: Ref<{}> = ref({});
 const jobButton: Ref<{}> = ref({});
@@ -112,30 +127,42 @@ $max-section-width: 65rem;
     flex: 1;
   }
 
-  & > .jobs-info > .card > .job-description {
-    display: flex;
+  & > .jobs-info > .job-card > .content {
+    @include centralize-horizontally();
     flex-direction: column;
     gap: $spacing-16;
+    user-select: none;
+  }
+
+  & > .jobs-info > .job-card > .content > .job-description {
     list-style: none;
   }
 
-  & > .jobs-info > .card > .job-description > .activity {
+  & > .jobs-info > .job-card > .content > .job-description > .activity {
     position: relative;
     padding-left: $spacing-16;
   }
 
-  & > .jobs-info > .card > .job-description > .activity::before {
+  & > .jobs-info > .job-card > .content > .job-description > .activity::before {
     content: '\25B8';
     position: absolute;
     left: 0;
     color: $purple-500;
   }
 
+  & > .jobs-info > .job-card > .content > .muted-text {
+    margin-top: $spacing-8;
+  }
+
+  & > .jobs-info > .job-card > .content > .techs {
+    @include centralize-vertically();
+    gap: $spacing-8;
+    flex-wrap: wrap;
+  }
+
   // animations
 
-  & > .jobs-info > .flip-card > .job-name,
-  & > .jobs-info > .flip-card > .job-period,
-  & > .jobs-info > .flip-card > .job-description {
+  & > .jobs-info > .job-card.flip-card > .content {
     animation: fade-content $animation-speed-xslow;
   }
 
@@ -152,7 +179,7 @@ $max-section-width: 65rem;
   }
 }
 
-@include media-query('screen-medium') {
+@include media-query('screen-small') {
   .work-section {
     display: flex;
     flex-direction: column;
