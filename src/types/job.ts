@@ -1,3 +1,8 @@
+type TechTags = {
+  label: string;
+  color: string;
+};
+
 type Job = {
   id: string;
   name: string;
@@ -5,7 +10,7 @@ type Job = {
   position: string;
   period: string;
   info: string[];
-  mainTechs: string[];
+  mainTechs: TechTags[];
 };
 
 export default Job;
