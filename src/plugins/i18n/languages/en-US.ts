@@ -53,11 +53,6 @@ export default {
       activities: {
         activity_1:
           "Planned, executed, and maintained a desktop application to control students' registration and booking of interviews in the commercial sector of an English school in the city of Lavras - Brazil."
-      },
-      main_techs: {
-        tech_1: 'Python',
-        tech_2: 'Tkinter',
-        tech_3: 'SQLite'
       }
     },
     youx: {
@@ -70,16 +65,6 @@ export default {
           'Proposed and performed quality assurance tests on various modules to ensure quality, browser compatibility and mobile responsiveness.',
         activity_3:
           'Worked in high-demand applications from clients such as Munich RE, the Government of Pará, the Ministry of Agriculture, and the Brazilian Federal Revenue Office.'
-      },
-      main_techs: {
-        tech_1: 'React',
-        tech_2: 'React Native',
-        tech_3: 'Vue 2',
-        tech_4: 'Angular 2',
-        tech_5: 'Spring Boot',
-        tech_6: 'PostgreSQL',
-        tech_7: 'Jest',
-        tech_8: 'Jasmine'
       }
     },
     azion: {
@@ -95,17 +80,9 @@ export default {
         activity_4:
           'Collaborate with designers to transform creative concepts into real-life solutions for clients and stakeholders.',
         activity_5: 'Share technical and process knowledge across multiple teams, including my own.'
-      },
-      main_techs: {
-        tech_1: 'Vue 3',
-        tech_2: 'Jest',
-        tech_3: 'Storybook',
-        tech_4: 'Docker',
-        tech_5: 'Cypress',
-        tech_6: 'Django',
-        tech_7: 'PostgreSQL'
       }
     }
   },
-  main_techs: 'Main techologies'
+  main_techs: 'Main techologies I have worked with:',
+  professional_xp: 'Professional Experience'
 };

@@ -53,11 +53,6 @@ export default {
       activities: {
         activity_1:
           'Planejamento, execução e manutenção de aplicação desktop, para o controle de cadastro de alunos e agendamento de entrevistas no setor comercial de uma escola de Inglês na cidade de Lavras.'
-      },
-      main_techs: {
-        tech_1: 'Python',
-        tech_2: 'Tkinter',
-        tech_3: 'SQLite'
       }
     },
     youx: {
@@ -71,16 +66,6 @@ export default {
           'Propus e executei testes em diversos módulos das aplicações para garantir qualidade, compatibilidade entre browsers e responsividade em aparelhos móveis.',
         activity_3:
           'Trabalhei em diversos projetos de alta demanda para clientes como Munich RE, Governo do Pará, Ministério da Agricultura e Receita Federal.'
-      },
-      main_techs: {
-        tech_1: 'React',
-        tech_2: 'React Native',
-        tech_3: 'Vue 2',
-        tech_4: 'Angular 2',
-        tech_5: 'Spring Boot',
-        tech_6: 'PostgreSQL',
-        tech_7: 'Jest',
-        tech_8: 'Jasmine'
       }
     },
     azion: {
@@ -98,17 +83,9 @@ export default {
           'Colaboro com o time de design, para transformar os conceitos criativos, em soluções reais para clientes externos e internos.',
         activity_5:
           'Compartilho conhecimento técnico e de processos, com membros do meu e de outros times.'
-      },
-      main_techs: {
-        tech_1: 'Vue 3',
-        tech_2: 'Jest',
-        tech_3: 'Storybook',
-        tech_4: 'Docker',
-        tech_5: 'Cypress',
-        tech_6: 'Django',
-        tech_7: 'PostgreSQL'
       }
     }
   },
-  main_techs: 'Principais tecnologias'
+  main_techs: 'Principais tecnologias com as quais trabalhei:',
+  professional_xp: 'Experiência Profissional'
 };
