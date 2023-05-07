@@ -5,3 +5,7 @@
 @mixin header-padding() {
   padding: $spacing-16 $spacing-32;
 }
+
+@mixin card-padding() {
+  padding: $spacing-24;
+}

@@ -14,10 +14,14 @@
       <app-phone />
     </div>
   </section>
+  <section class="about-me">
+    <h2 class="professional-xp">{{ $t('professional_xp') }}</h2>
+    <work-section />
+  </section>
 </template>
 
 <script setup lang="ts">
-import { AppPhone } from '@/components';
+import { AppPhone, WorkSection } from '@/components';
 </script>
 
 <style lang="scss">
@@ -90,5 +94,15 @@ $max-info-width: 600px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+
+.about-me {
+  @include centralize-vertically();
+  flex-direction: column;
+  max-width: $max-home-width;
+  margin-inline: auto;
+  margin-top: 5rem;
+  gap: $spacing-32;
+  height: 100%;
 }
 </style>

@@ -1,0 +1,49 @@
+$size-minus-2: calc(-1 * $size-2);
+
+.card {
+  @include centralize-horizontally();
+  @include card-padding();
+  flex-direction: column;
+  gap: $spacing-16;
+  border-radius: $size-5;
+  background-color: $white-100;
+  box-shadow: $size-2 $size-2 $size-4;
+  color: $gray-200;
+
+  & .card-title {
+    font-size: $font-size-16;
+    font-weight: $font-weight-bold;
+    color: $primary-text-color;
+  }
+
+  & .card-content {
+    font-size: $font-size-16;
+    font-weight: $font-weight-regular;
+    color: $tertiary-color-hover;
+  }
+
+  &.flip-card {
+    animation: flip $animation-speed-xslow;
+  }
+}
+
+.dark .card {
+  background-color: $black-100;
+  box-shadow: $size-2 $size-2 $size-4;
+  color: $gray-500;
+
+  & > .card-content {
+    color: $tertiary-color;
+  }
+}
+
+@keyframes flip {
+  50% {
+    transform: rotateX(180deg);
+    box-shadow: $size-2 $size-minus-2 $size-4;
+  }
+
+  100% {
+    transform: rotateX(360deg);
+  }
+}

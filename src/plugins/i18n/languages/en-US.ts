@@ -17,7 +17,7 @@ export default {
     social: {
       linkedin: {
         label: 'LinkedIn',
-        description: 'Visit my profile and see my professional acomplishments.'
+        description: 'Visit my profile and see my professional accomplishments.'
       },
       github: {
         label: 'GitHub',
@@ -35,7 +35,6 @@ export default {
     file_render: 'Error while rendering the file. Please try again later.'
   },
   presentation: {
-    name: "Hi, I'm William! 👋",
     intro: {
       p1: 'Turning',
       p2: 'ideas',
@@ -45,5 +44,45 @@ export default {
     },
     description:
       'I am a developer (and occasionally write about tech) with experience in building applications for the web.'
-  }
+  },
+  work_experience: {
+    uptime: {
+      company: 'Uptime Consultants',
+      position: 'Freelancer',
+      period: 'January 2020 - July 2020',
+      activities: {
+        activity_1:
+          "Planned, executed, and maintained a desktop application to control students' registration and booking of interviews in the commercial sector of an English school in the city of Lavras - Brazil."
+      }
+    },
+    youx: {
+      company: 'YouX Group',
+      position: 'Software Analyst',
+      period: 'August 2020 - December 2021',
+      activities: {
+        activity_1: 'Developed and maintained major features in both mobile and web applications.',
+        activity_2:
+          'Proposed and performed quality assurance tests on various modules to ensure quality, browser compatibility and mobile responsiveness.',
+        activity_3:
+          'Worked in high-demand applications from clients such as Munich RE, the Government of Pará, the Ministry of Agriculture, and the Brazilian Federal Revenue Office.'
+      }
+    },
+    azion: {
+      company: 'Azion Technologies',
+      position: 'Software Engineer',
+      period: 'December 2021 - Present',
+      activities: {
+        activity_1:
+          "Deliver high-quality, production ready code for a diverse array of projects related to Azion's high-demand platform.",
+        activity_2: 'Write thoughtful and quality-driven tests on several internal projects.',
+        activity_3:
+          'Work alongside technical leadership to create and improve documentation of processes.',
+        activity_4:
+          'Collaborate with designers to transform creative concepts into real-life solutions for clients and stakeholders.',
+        activity_5: 'Share technical and process knowledge across multiple teams, including my own.'
+      }
+    }
+  },
+  main_techs: 'Main techologies I have worked with:',
+  professional_xp: 'Professional Experience'
 };
