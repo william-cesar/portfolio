@@ -6,11 +6,6 @@ const infoList = (company: keyof typeof enUS.work_experience): string[] => {
   return keys.map((key) => `work_experience.${company}.activities.${key}`);
 };
 
-const techList = (company: keyof typeof enUS.work_experience): string[] => {
-  const keys: string[] = Object.keys(enUS.work_experience[company].main_techs);
-  return keys.map((key) => `work_experience.${company}.main_techs.${key}`);
-};
-
 const JobsList: Job[] = [
   {
     id: 'az01',
@@ -19,7 +14,15 @@ const JobsList: Job[] = [
     position: 'work_experience.azion.position',
     period: 'work_experience.azion.period',
     info: infoList('azion'),
-    mainTechs: techList('azion')
+    mainTechs: [
+      { label: 'Vue 3', color: '#13ae82' },
+      { label: 'Docker', color: '#3869d5' },
+      { label: 'Jest', color: '#a04f6a' },
+      { label: 'Storybook', color: '#d33ea4' },
+      { label: 'Cypress', color: '#51dcbd' },
+      { label: 'Django', color: '#16634d' },
+      { label: 'PostgreSQL', color: '#10348f' }
+    ]
   },
   {
     id: 'yo01',
@@ -28,7 +31,16 @@ const JobsList: Job[] = [
     position: 'work_experience.youx.position',
     period: 'work_experience.youx.period',
     info: infoList('youx'),
-    mainTechs: techList('youx')
+    mainTechs: [
+      { label: 'Spring Boot', color: '#19b162' },
+      { label: 'Angular 2', color: '#cf3434' },
+      { label: 'Jest', color: '#a04f6a' },
+      { label: 'Jasmine', color: '#881e80' },
+      { label: 'React', color: '#2e70b8' },
+      { label: 'React Native', color: '#2473c8' },
+      { label: 'PostgreSQL', color: '#10348f' },
+      { label: 'Vue 2', color: '#13ae82' }
+    ]
   },
   {
     id: 'up01',
@@ -37,7 +49,11 @@ const JobsList: Job[] = [
     position: 'work_experience.uptime.position',
     period: 'work_experience.uptime.period',
     info: infoList('uptime'),
-    mainTechs: techList('uptime')
+    mainTechs: [
+      { label: 'Python', color: '#d6c331' },
+      { label: 'Tkinter', color: '#214ecb' },
+      { label: 'SQLite', color: '#1b3e9e' }
+    ]
   }
 ];
 
