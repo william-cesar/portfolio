@@ -83,6 +83,6 @@ export default {
       }
     }
   },
-  main_techs: 'Main techologies I have worked with:',
+  main_techs: 'Main techologies used:',
   professional_xp: 'Professional Experience'
 };

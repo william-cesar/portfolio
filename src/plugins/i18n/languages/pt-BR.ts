@@ -86,6 +86,6 @@ export default {
       }
     }
   },
-  main_techs: 'Principais tecnologias com as quais trabalhei:',
+  main_techs: 'Principais tecnologias utilizadas:',
   professional_xp: 'Experiência Profissional'
 };
