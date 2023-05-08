@@ -5,6 +5,7 @@ import AppTag from './base/app-tag/app-tag.vue';
 import PdfPreviewer from './base/pdf-previewer/pdf-previewer.vue';
 
 // Section components
+import CoverSection from './section/cover-section/cover-section.vue';
 import WorkSection from './section/work-section/work-section.vue';
 
-export { AppHeader, AppPhone, AppTag, PdfPreviewer, WorkSection };
+export { AppHeader, AppPhone, AppTag, PdfPreviewer, CoverSection, WorkSection };

@@ -1,64 +1,67 @@
 <template>
-  <div class="work-section">
+  <section class="work-section">
+    <h2 class="professional-xp">{{ $t('professional_xp') }}</h2>
     <div class="jobs">
-      <button
-        class="job-name-btn"
-        ref="jobButton"
-        :class="{ 'job-active': job.id === selectedJob.id }"
-        v-for="(job, idx) in JobsList"
-        :key="job.id"
-        @click="selectJob(job, idx)"
-      >
-        {{ $t(job.name) }}
-      </button>
-    </div>
-    <div class="jobs-info">
-      <div
-        class="card job-card"
-        ref="jobCard"
-      >
-        <div class="content">
-          <h4 class="job-name card-title">{{ $t(selectedJob.position) }} @
-            <a
-              :href="selectedJob.companyLink"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {{ $t(selectedJob.name) }}
-            </a>
-          </h4>
-          <span class="job-period muted-text">{{ $t(selectedJob.period) }}</span>
-          <ul
-            class="job-description card-content"
-            v-for="(activity, idx) in selectedJob.info"
-            :key="idx"
-          >
-            <li class="activity">
-              {{ $t(activity) }}
-            </li>
-          </ul>
-          <span class="muted-text">{{ $t('main_techs') }}</span>
-          <div class="techs">
-            <template
-              v-for="(tech, idx) in selectedJob.mainTechs"
+      <div class="jobs-btns">
+        <button
+          class="job-name-btn"
+          ref="jobButton"
+          :class="{ 'job-active': job.id === selectedJob.id }"
+          v-for="(job, idx) in JobsList"
+          :key="job.id"
+          @click="selectJob(job, idx)"
+        >
+          {{ $t(job.name) }}
+        </button>
+      </div>
+      <div class="jobs-info">
+        <div
+          class="card job-card"
+          ref="jobCard"
+        >
+          <div class="content">
+            <h4 class="job-name card-title">{{ $t(selectedJob.position) }} @
+              <a
+                :href="selectedJob.companyLink"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ $t(selectedJob.name) }}
+              </a>
+            </h4>
+            <span class="job-period muted-text">{{ $t(selectedJob.period) }}</span>
+            <ul
+              class="job-description card-content"
+              v-for="(activity, idx) in selectedJob.info"
               :key="idx"
             >
-              <app-tag
-                :label="tech.label"
-                :color="tech.color"
-              />
-            </template>
+              <li class="activity">
+                {{ $t(activity) }}
+              </li>
+            </ul>
+            <span class="muted-text">{{ $t('main_techs') }}</span>
+            <div class="techs">
+              <template
+                v-for="(tech, idx) in selectedJob.mainTechs"
+                :key="idx"
+              >
+                <app-tag
+                  :label="tech.label"
+                  :color="tech.color"
+                />
+              </template>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 import { ref, type Ref } from 'vue';
 import type Job from '@/types/job';
-import JobsList from './jobs-list';
+import JobsList from './helpers/jobs-list';
 import { AppTag } from '@/components/index';
 
 const jobCard: Ref<{}> = ref({});
@@ -75,7 +78,7 @@ const selectJob = (job: Job, buttonIndex: number): void => {
     const buttons = (jobButton.value as NodeListOf<HTMLButtonElement>);
     buttons.forEach((button) => button.disabled = true);
 
-    buttons[buttonIndex].scrollIntoView({ behavior: 'smooth' });
+    buttons[buttonIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
     setTimeout(() => {
       (jobCard.value as HTMLDivElement).classList.remove('flip-card');
@@ -88,21 +91,26 @@ const selectJob = (job: Job, buttonIndex: number): void => {
 <style lang="scss">
 $active-background: #9f5def52;
 $btn-border: #9f5def6f;
-$max-section-width: 65rem;
 
 .work-section {
   display: flex;
-  gap: $spacing-32;
-  width: min($max-section-width, 100%);
-  margin-inline: auto;
+  flex-direction: column;
+  gap: $spacing-40;
+  width: 100%;
+  margin: $spacing-40 auto;
 
   & > .jobs {
+    display: flex;
+    gap: $spacing-32;
+  }
+
+  & > .jobs > .jobs-btns {
     display: inherit;
     flex-direction: column;
     padding-block: $spacing-8;
   }
 
-  & > .jobs > .job-name-btn {
+  & > .jobs > .jobs-btns > .job-name-btn {
     background-color: transparent;
     text-align: left;
     color: $tertiary-text-color;
@@ -113,48 +121,47 @@ $max-section-width: 65rem;
     transition: all $animation-speed-medium $animation-delay-short;
   }
 
-  & > .jobs > .job-name-btn:disabled {
+  & > .jobs > .jobs-btns > .job-name-btn:disabled {
     cursor: pointer;
   }
 
-  & > .jobs > .job-name-btn.job-active {
+  & > .jobs > .jobs-btns > .job-name-btn.job-active {
     background-color: $active-background;
     color: $primary-text-color;
     border-left: $size-2 solid $secondary-color-hover;
   }
 
-  & > .jobs-info {
+  & > .jobs > .jobs-info {
     flex: 1;
   }
 
-  & > .jobs-info > .job-card > .content {
+  & > .jobs > .jobs-info > .job-card > .content {
     @include centralize-horizontally();
     flex-direction: column;
     gap: $spacing-16;
-    user-select: none;
   }
 
-  & > .jobs-info > .job-card > .content > .job-description {
+  & > .jobs > .jobs-info > .job-card > .content > .job-description {
     list-style: none;
   }
 
-  & > .jobs-info > .job-card > .content > .job-description > .activity {
+  & > .jobs > .jobs-info > .job-card > .content > .job-description > .activity {
     position: relative;
     padding-left: $spacing-16;
   }
 
-  & > .jobs-info > .job-card > .content > .job-description > .activity::before {
+  & > .jobs > .jobs-info > .job-card > .content > .job-description > .activity::before {
     content: '\25B8';
     position: absolute;
     left: 0;
     color: $purple-500;
   }
 
-  & > .jobs-info > .job-card > .content > .muted-text {
+  & > .jobs > .jobs-info > .job-card > .content > .muted-text {
     margin-top: $spacing-8;
   }
 
-  & > .jobs-info > .job-card > .content > .techs {
+  & > .jobs > .jobs-info > .job-card > .content > .techs {
     @include centralize-vertically();
     gap: $spacing-8;
     flex-wrap: wrap;
@@ -162,7 +169,7 @@ $max-section-width: 65rem;
 
   // animations
 
-  & > .jobs-info > .job-card.flip-card > .content {
+  & > .jobs > .jobs-info > .job-card.flip-card > .content {
     animation: fade-content $animation-speed-xslow;
   }
 
@@ -181,20 +188,22 @@ $max-section-width: 65rem;
 
 @include media-query('screen-small') {
   .work-section {
-    display: flex;
-    flex-direction: column;
-
     & > .jobs {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & > .jobs > .jobs-btns {
       flex-direction: row;
       overflow-x: auto;
       scrollbar-width: none;
     }
 
-    & > .jobs::-webkit-scrollbar {
+    & > .jobs > .jobs-btns::-webkit-scrollbar {
       display: none;
     }
 
-    & > .jobs > .job-name-btn {
+    & > .jobs > .jobs-btns > .job-name-btn {
       min-width: fit-content;
       text-align: left;
       padding: $spacing-8 $spacing-16;
@@ -203,7 +212,7 @@ $max-section-width: 65rem;
       border-radius: $size-2 $size-2 $size-0 $size-0;
     }
 
-    & > .jobs > .job-name-btn.job-active {
+    & > .jobs > .jobs-btns > .job-name-btn.job-active {
       border-left: none;
       border-bottom: $size-2 solid $secondary-color-hover;
     }
