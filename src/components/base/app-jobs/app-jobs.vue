@@ -59,7 +59,7 @@
 import { ref, type Ref } from 'vue';
 import type Job from '@/types/job';
 import JobsList from './helpers/jobs-list';
-import { AppTag } from '@/components/index';
+import { AppTag } from '@/components';
 
 const jobCard: Ref<{}> = ref({});
 const jobButton: Ref<{}> = ref({});

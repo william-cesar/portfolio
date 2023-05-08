@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { AppJobs } from '@/components/index';
+import { AppJobs } from '@/components';
 </script>
 
 <style lang="scss">
