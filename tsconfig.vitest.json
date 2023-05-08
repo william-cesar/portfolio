@@ -4,6 +4,6 @@
   "compilerOptions": {
     "composite": true,
     "lib": [],
-    "types": ["node", "jsdom", "vue3-toastify/global"]
+    "types": ["node", "jsdom"]
   }
 }

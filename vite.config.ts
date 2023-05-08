@@ -32,10 +32,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `
-        @import "./src/assets/scss/index.scss";
-        @import '/node_modules/vue3-toastify/dist/index.css';
-        `
+        additionalData: '@import "./src/assets/scss/index.scss";'
       }
     }
   },
