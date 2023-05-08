@@ -1,5 +1,5 @@
 <template>
-  <section class="cover">
+  <section class="cover-section">
     <div class="cover-info">
       <h1 class="intro">
         {{ $t('presentation.intro.p1') }}
@@ -26,7 +26,7 @@ $blue: #048af8 65%;
 $max-info-width: 600px;
 $section-height: calc(100dvh - $size-96);
 
-.cover {
+.cover-section {
   @include centralize-vertically();
   justify-content: space-around;
   height: $section-height;
@@ -66,7 +66,7 @@ $section-height: calc(100dvh - $size-96);
   }
 }
 
-.dark .cover {
+.dark .cover-section {
   & > .cover-info > .intro > .real-life {
     background: linear-gradient(45deg, $white-300, $purple, $blue, $white-300);
     background-clip: text;
@@ -76,13 +76,13 @@ $section-height: calc(100dvh - $size-96);
 }
 
 @include media-query('screen-medium') {
-  .cover {
+  .cover-section {
     flex-direction: column;
     height: 100%;
     margin-block: $spacing-40;
   }
 
-  .cover > .cover-info {
+  .cover-section > .cover-info {
     min-width: 100%;
   }
 }

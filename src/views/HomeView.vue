@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
+  <div class="home-view">
     <cover-section />
     <work-section />
+    <about-section />
   </div>
 </template>
 
 <script setup lang="ts">
-import { CoverSection, WorkSection } from '@/components';
+import { AboutSection, CoverSection, WorkSection } from '@/components';
 </script>
 
 <style lang="scss">
 $max-home-width: calc(1400px - $size-64);
 
-.home {
+.home-view {
   @include centralize();
   flex-direction: column;
   max-width: $max-home-width;
