@@ -4,8 +4,9 @@
     <div class="about-wrapper">
       <div class="about-me-section">
         <p class="about-section-1 tertiary-text">{{ $t('me.sec_1') }}</p>
-        <p class="about-section-2 tertiary-text">{{ $t('me.sec_2') }}&nbsp;<span class="info-text">{{
-          $t('work_section.azion.company') }}</span>.</p>
+        <p class="about-section-2 tertiary-text">{{ $t('me.sec_2') }}&nbsp;
+          <span class="info-text">{{ $t('work_section.azion.company') }}</span>.
+        </p>
         <p class="about-section-3 tertiary-text">{{ $t('me.sec_3') }}</p>
         <ul class="techs">
           <li
