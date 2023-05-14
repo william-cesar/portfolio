@@ -3,11 +3,12 @@
     <cover-section />
     <about-section />
     <work-section />
+    <projects-section />
   </div>
 </template>
 
 <script setup lang="ts">
-import { AboutSection, CoverSection, WorkSection } from '@/components';
+import { AboutSection, CoverSection, ProjectsSection, WorkSection } from '@/components';
 </script>
 
 <style lang="scss">
