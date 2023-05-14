@@ -1,6 +1,6 @@
 <template>
   <section class="work-section">
-    <h2 class="professional-xp">{{ $t('professional_xp') }}</h2>
+    <h2 class="professional-xp">{{ $t('work_section.title') }}</h2>
     <app-jobs />
   </section>
 </template>

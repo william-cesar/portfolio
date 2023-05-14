@@ -37,7 +37,7 @@
               {{ $t(activity) }}
             </li>
           </ul>
-          <span class="muted-text">{{ $t('main_techs') }}</span>
+          <span class="muted-text">{{ $t('work_section.main_techs') }}</span>
           <div class="techs">
             <template
               v-for="(tech, idx) in selectedJob.mainTechs"
@@ -58,7 +58,7 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue';
 import type Job from '@/types/job';
-import JobsList from './helpers/jobs-list';
+import JobsList from '@/helpers/jobs-list';
 import { AppTag } from '@/components';
 
 const jobCard: Ref<{}> = ref({});
