@@ -1,7 +1,7 @@
-import type Job from '@/types/job';
+import type { Company, Job} from '@/types/job';
 import enUS from '@/plugins/i18n/languages/en-US';
 
-const infoList = (company: keyof typeof enUS.work_section): string[] => {
+const infoList = (company: Company): string[] => {
   const keys: string[] = Object.keys(enUS.work_section[company].activities);
   return keys.map((key) => `work_section.${company}.activities.${key}`);
 };

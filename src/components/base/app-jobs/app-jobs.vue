@@ -57,7 +57,7 @@
 
 <script setup lang="ts">
 import { ref, type Ref } from 'vue';
-import type Job from '@/types/job';
+import type { Job } from '@/types/job';
 import JobsList from '@/helpers/jobs-list';
 import { AppTag } from '@/components';
 
