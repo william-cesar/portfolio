@@ -54,8 +54,30 @@
         </p>
       </section>
     </a>
+    <a
+      class="notification-link"
+      :href="resume"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      <img
+        class="notification-icon"
+        src="@/assets/files/png/resume.png"
+        alt="resume-icon"
+      />
+      <section class="notification-info">
+        <span class="notification-title">{{ $t('phone.resume.label') }}</span>
+        <p class="notification-description">
+          {{ $t('phone.resume.description') }}
+        </p>
+      </section>
+    </a>
   </div>
 </template>
+
+<script setup lang="ts">
+import resume from '@/assets/files/pdf/resume.pdf';
+</script>
 
 <style lang="scss">
 .phone-notification {
