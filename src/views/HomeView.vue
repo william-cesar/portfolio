@@ -1,8 +1,8 @@
 <template>
   <div class="home-view">
     <cover-section />
-    <work-section />
     <about-section />
+    <work-section />
   </div>
 </template>
 
