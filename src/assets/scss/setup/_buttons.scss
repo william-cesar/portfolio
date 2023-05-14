@@ -3,6 +3,7 @@ button {
   border-radius: $size-5;
   border: $size-1 solid transparent;
   cursor: pointer;
+  transition: all ease $animation-speed-slow;
 
   &.btn-primary {
     background-color: $secondary-color;

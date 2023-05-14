@@ -13,7 +13,8 @@
             v-for="(tech, idx) in techs"
             :key="idx"
             class="tech"
-          >{{ tech }}
+          >
+            {{ tech }}
           </li>
         </ul>
       </div>
@@ -100,7 +101,7 @@ $image-size: 14rem;
 
     @include media-query('screen-large') {
       & {
-        flex-direction: column;
+        flex-direction: column-reverse;
       }
 
       & > .my-picture {
