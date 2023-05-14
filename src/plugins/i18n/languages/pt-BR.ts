@@ -49,7 +49,7 @@ export default {
   },
   work_section: {
     main_techs: 'Principais tecnologias utilizadas:',
-    title: 'Experiência Profissional',
+    title: 'Experiência profissional',
     uptime: {
       company: 'Uptime Consultants',
       position: 'Freelancer',
@@ -97,5 +97,9 @@ export default {
     sec_2: 'Pula para os dias atuais, posso dizer que tenho o provilégio de ter trabalhado em diferentes ambientes e projetos, os quais tem me feito crescer muito como profissional e como pessoa. Meu foco atual está em ajudar a construir uma plataforma de edge computing que seja segura, simples e robusta na',
     sec_3: 'Algumas tecnologias com que tenho trabalhado recementemente:',
     techs: ['Typescript', 'Vue 3', 'Nuxt 3', 'Docker', 'Django', 'Node.js']
+  },
+  projects: {
+    title: 'Principais criações',
+    see_more: 'Veja mais'
   }
 };

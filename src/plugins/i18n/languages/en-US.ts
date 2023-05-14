@@ -49,7 +49,7 @@ export default {
   },
   work_section: {
     main_techs: 'Main techologies used:',
-    title: 'Professional Experience',  
+    title: 'Professional experience',  
     uptime: {
       company: 'Uptime Consultants',
       position: 'Freelancer',
@@ -93,5 +93,9 @@ export default {
     sec_2: "Fast-forward to today, I can say that I've had the privilege of working in different environments and projects that have helped me grow a lot as a software engineer and a person. My current focus is to help build a secure, simple, and robust edge platform at",
     sec_3: 'Here are some technologies I have been working with recently:',
     techs: ['Typescript', 'Vue 3', 'Nuxt 3', 'Docker', 'Django', 'Node.js']
+  },
+  projects: {
+    title: 'Main creations',
+    see_more: 'See more'
   }
 };
