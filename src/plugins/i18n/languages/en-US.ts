@@ -17,7 +17,7 @@ export default {
     social: {
       linkedin: {
         label: 'LinkedIn',
-        description: 'Visit my profile and see my professional accomplishments.'
+        description: 'Visit my profile and see my professional carrer.'
       },
       github: {
         label: 'GitHub',
@@ -27,12 +27,14 @@ export default {
         label: 'Email',
         description: "Send me a mail. Let's have a conversation."
       }
+    },
+    resume: {
+      label: 'Resume',
+      description: 'See and download my resume.'
     }
   },
-  download: 'Download',
   errors: {
-    file_download: 'The file could not be downloaded. Please try again later.',
-    file_render: 'Error while rendering the file. Please try again later.'
+    not_optmized: 'Not optmized on screens smaller than 320px.'
   },
   presentation: {
     intro: {
