@@ -27,8 +27,8 @@ import PagesLinksTray from './components/pages-links-tray/pages-links-tray.vue';
   z-index: 1;
 
   & > .header-area {
-    @include header-padding();
     @include centralize-vertically();
+    padding: $spacing-16 $spacing-32;
     background-color: $purple-200;
     height: $header-height;
     justify-content: space-between;
@@ -47,8 +47,16 @@ import PagesLinksTray from './components/pages-links-tray/pages-links-tray.vue';
 
 @include media-query('screen-medium') {
   .app-header {
+    & > .header-area {
+      padding-inline: $spacing-16;
+    }
+
     & > .header-area > .pages-links-tray {
       display: flex;
+    }
+
+    & > .header-area > .right-float {
+      gap: $spacing-24;
     }
 
     & > .header-area > .right-float > .pages-links {
