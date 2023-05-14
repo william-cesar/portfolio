@@ -1,18 +1,18 @@
-import type Job from '@/types/job';
+import type { Company, Job} from '@/types/job';
 import enUS from '@/plugins/i18n/languages/en-US';
 
-const infoList = (company: keyof typeof enUS.work_experience): string[] => {
-  const keys: string[] = Object.keys(enUS.work_experience[company].activities);
-  return keys.map((key) => `work_experience.${company}.activities.${key}`);
+const infoList = (company: Company): string[] => {
+  const keys: string[] = Object.keys(enUS.work_section[company].activities);
+  return keys.map((key) => `work_section.${company}.activities.${key}`);
 };
 
 const JobsList: Job[] = [
   {
     id: 'az01',
-    name: 'work_experience.azion.company',
+    name: 'work_section.azion.company',
     companyLink: 'https://www.azion.com',
-    position: 'work_experience.azion.position',
-    period: 'work_experience.azion.period',
+    position: 'work_section.azion.position',
+    period: 'work_section.azion.period',
     info: infoList('azion'),
     mainTechs: [
       { label: 'Vue 3', color: '#13ae82' },
@@ -26,10 +26,10 @@ const JobsList: Job[] = [
   },
   {
     id: 'yo01',
-    name: 'work_experience.youx.company',
+    name: 'work_section.youx.company',
     companyLink: 'https://youxgroup.com.br',
-    position: 'work_experience.youx.position',
-    period: 'work_experience.youx.period',
+    position: 'work_section.youx.position',
+    period: 'work_section.youx.period',
     info: infoList('youx'),
     mainTechs: [
       { label: 'Spring Boot', color: '#19b162' },
@@ -44,10 +44,10 @@ const JobsList: Job[] = [
   },
   {
     id: 'up01',
-    name: 'work_experience.uptime.company',
+    name: 'work_section.uptime.company',
     companyLink: 'https://www.instagram.com/uptimelavras/',
-    position: 'work_experience.uptime.position',
-    period: 'work_experience.uptime.period',
+    position: 'work_section.uptime.position',
+    period: 'work_section.uptime.period',
     info: infoList('uptime'),
     mainTechs: [
       { label: 'Python', color: '#d6c331' },

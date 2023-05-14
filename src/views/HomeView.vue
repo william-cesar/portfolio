@@ -1,108 +1,23 @@
 <template>
-  <section class="home">
-    <div class="home-info">
-      <h1 class="intro">
-        {{ $t('presentation.intro.p1') }}
-        <span class="ideas">{{ $t('presentation.intro.p2') }}</span>
-        {{ $t('presentation.intro.p3') }}
-        <span class="real-life">{{ $t('presentation.intro.p4') }}</span>
-        {{ $t('presentation.intro.p5') }}
-      </h1>
-      <p class="description tertiary-text">{{ $t('presentation.description') }}</p>
-    </div>
-    <div class="phone-section">
-      <app-phone />
-    </div>
-  </section>
-  <section class="about-me">
-    <h2 class="professional-xp">{{ $t('professional_xp') }}</h2>
+  <div class="home-view">
+    <cover-section />
+    <about-section />
     <work-section />
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { AppPhone, WorkSection } from '@/components';
+import { AboutSection, CoverSection, WorkSection } from '@/components';
 </script>
 
 <style lang="scss">
-$spacing-minus-96: calc(-1 * $size-96);
-$purple: #8333eb 35%;
-$blue: #048af8 65%;
 $max-home-width: calc(1400px - $size-64);
-$max-info-width: 600px;
 
-.home {
-  @include centralize-vertically();
-  justify-content: space-around;
-  height: 100%;
-  max-width: $max-home-width;
-  margin-inline: auto;
-  gap: $spacing-32;
-
-  & > .phone-section {
-    @include centralize-horizontally();
-  }
-
-  & > .home-info {
-    max-width: $max-info-width;
-    display: inherit;
-    flex-direction: column;
-    position: relative;
-    gap: $spacing-16;
-  }
-
-  & > .home-info > .intro,
-  & > .home-info > .intro > * {
-    font-size: $size-48;
-    word-break: keep-all;
-    font-weight: $font-weight-bold;
-    word-spacing: $spacing-2;
-  }
-
-  & > .home-info > .intro > .ideas {
-    color: $primary-background-color;
-    -webkit-text-stroke: $size-1 $primary-text-color;
-  }
-
-  & > .home-info > .intro > .real-life {
-    background: linear-gradient(45deg, $black-300, $purple, $blue, $black-300);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  & > .home-info > .description {
-    line-height: $line-height-medium;
-  }
-}
-
-@include media-query('screen-medium') {
-  .home {
-    flex-direction: column;
-    gap: $spacing-48;
-  }
-
-  .home > .home-info {
-    width: 100%;
-  }
-}
-
-.dark .home {
-  & > .home-info > .intro > .real-life {
-    background: linear-gradient(45deg, $white-300, $purple, $blue, $white-300);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
-.about-me {
-  @include centralize-vertically();
+.home-view {
+  @include centralize();
   flex-direction: column;
   max-width: $max-home-width;
   margin-inline: auto;
-  margin-top: 5rem;
-  gap: $spacing-32;
-  height: 100%;
+  gap: $spacing-60;
 }
 </style>

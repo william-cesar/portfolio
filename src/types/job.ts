@@ -3,7 +3,9 @@ type TechTags = {
   color: string;
 };
 
-type Job = {
+export type Company = 'uptime' | 'azion' | 'youx';
+
+export type Job = {
   id: string;
   name: string;
   companyLink: string;
@@ -12,5 +14,3 @@ type Job = {
   info: string[];
   mainTechs: TechTags[];
 };
-
-export default Job;

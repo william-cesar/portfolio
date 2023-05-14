@@ -45,7 +45,9 @@ export default {
     description:
       'I am a developer (and occasionally write about tech) with experience in building applications for the web.'
   },
-  work_experience: {
+  work_section: {
+    main_techs: 'Main techologies used:',
+    title: 'Professional Experience',  
     uptime: {
       company: 'Uptime Consultants',
       position: 'Freelancer',
@@ -83,6 +85,11 @@ export default {
       }
     }
   },
-  main_techs: 'Main techologies I have worked with:',
-  professional_xp: 'Professional Experience'
+  me: {
+    title: 'About me',
+    sec_1: 'Hi! My name is William, and I enjoy bringing ideas into software. My history in software engineering started back in 2019 when I found myself seeking to optimize a routine of calling potential new students at Uptime Consultants. Turns out, trying to simplify routines can teach a lot about programming.',
+    sec_2: "Fast-forward to today, I can say that I've had the privilege of working in different environments and projects that have helped me grow a lot as a software engineer and a person. My current focus is to help build a secure, simple, and robust edge platform at",
+    sec_3: 'Here are some technologies I have been working with recently:',
+    techs: ['Typescript', 'Vue 3', 'Nuxt 3', 'Docker', 'Django', 'Node.js']
+  }
 };

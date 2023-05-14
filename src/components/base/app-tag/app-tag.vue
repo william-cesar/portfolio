@@ -22,7 +22,6 @@ defineProps({
   border-radius: $size-8;
   border-width: $size-2;
   border-style: solid;
-  user-select: none;
 
   & > .tag-label {
     font-size: $size-12;

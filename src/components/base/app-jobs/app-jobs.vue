@@ -1,6 +1,6 @@
 <template>
-  <div class="work-section">
-    <div class="jobs">
+  <div class="app-jobs">
+    <div class="jobs-btns">
       <button
         class="job-name-btn"
         ref="jobButton"
@@ -37,7 +37,7 @@
               {{ $t(activity) }}
             </li>
           </ul>
-          <span class="muted-text">{{ $t('main_techs') }}</span>
+          <span class="muted-text">{{ $t('work_section.main_techs') }}</span>
           <div class="techs">
             <template
               v-for="(tech, idx) in selectedJob.mainTechs"
@@ -57,9 +57,9 @@
 
 <script setup lang="ts">
 import { ref, type Ref } from 'vue';
-import type Job from '@/types/job';
-import JobsList from './jobs-list';
-import AppTag from '../app-tag/app-tag.vue';
+import type { Job } from '@/types/job';
+import JobsList from '@/helpers/jobs-list';
+import { AppTag } from '@/components';
 
 const jobCard: Ref<{}> = ref({});
 const jobButton: Ref<{}> = ref({});
@@ -75,7 +75,7 @@ const selectJob = (job: Job, buttonIndex: number): void => {
     const buttons = (jobButton.value as NodeListOf<HTMLButtonElement>);
     buttons.forEach((button) => button.disabled = true);
 
-    buttons[buttonIndex].scrollIntoView({ behavior: 'smooth' });
+    buttons[buttonIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
     setTimeout(() => {
       (jobCard.value as HTMLDivElement).classList.remove('flip-card');
@@ -88,21 +88,18 @@ const selectJob = (job: Job, buttonIndex: number): void => {
 <style lang="scss">
 $active-background: #9f5def52;
 $btn-border: #9f5def6f;
-$max-section-width: 65rem;
 
-.work-section {
+.app-jobs {
   display: flex;
   gap: $spacing-32;
-  width: min($max-section-width, 100%);
-  margin-inline: auto;
 
-  & > .jobs {
+  & > .jobs-btns {
     display: inherit;
     flex-direction: column;
     padding-block: $spacing-8;
   }
 
-  & > .jobs > .job-name-btn {
+  & > .jobs-btns > .job-name-btn {
     background-color: transparent;
     text-align: left;
     color: $tertiary-text-color;
@@ -113,11 +110,11 @@ $max-section-width: 65rem;
     transition: all $animation-speed-medium $animation-delay-short;
   }
 
-  & > .jobs > .job-name-btn:disabled {
+  & > .jobs-btns > .job-name-btn:disabled {
     cursor: pointer;
   }
 
-  & > .jobs > .job-name-btn.job-active {
+  & > .jobs-btns > .job-name-btn.job-active {
     background-color: $active-background;
     color: $primary-text-color;
     border-left: $size-2 solid $secondary-color-hover;
@@ -131,7 +128,6 @@ $max-section-width: 65rem;
     @include centralize-horizontally();
     flex-direction: column;
     gap: $spacing-16;
-    user-select: none;
   }
 
   & > .jobs-info > .job-card > .content > .job-description {
@@ -180,21 +176,21 @@ $max-section-width: 65rem;
 }
 
 @include media-query('screen-small') {
-  .work-section {
+  .app-jobs {
     display: flex;
     flex-direction: column;
 
-    & > .jobs {
+    & > .jobs-btns {
       flex-direction: row;
       overflow-x: auto;
       scrollbar-width: none;
     }
 
-    & > .jobs::-webkit-scrollbar {
+    & > .jobs-btns::-webkit-scrollbar {
       display: none;
     }
 
-    & > .jobs > .job-name-btn {
+    & > .jobs-btns > .job-name-btn {
       min-width: fit-content;
       text-align: left;
       padding: $spacing-8 $spacing-16;
@@ -203,7 +199,7 @@ $max-section-width: 65rem;
       border-radius: $size-2 $size-2 $size-0 $size-0;
     }
 
-    & > .jobs > .job-name-btn.job-active {
+    & > .jobs-btns > .job-name-btn.job-active {
       border-left: none;
       border-bottom: $size-2 solid $secondary-color-hover;
     }

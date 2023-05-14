@@ -1,18 +1,15 @@
 <template>
   <div class="phone-clock">
-    <span class="current-time">{{ formatTimePeriod($d(currentDateTime, 'hour')) }}</span>
-    <span class="current-date">{{ capitalize($d(currentDateTime, 'date')) }}</span>
+    <span class="current-time">{{ formatTimePeriod($d(now, 'hour')) }}</span>
+    <span class="current-date">{{ capitalize($d(now, 'date')) }}</span>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, type Ref } from 'vue';
+import type { Ref } from 'vue';
+import { useNow } from '@vueuse/core'
 
-const currentDateTime: Ref<Date> = ref(new Date());
-
-setInterval(() => {
-  currentDateTime.value = new Date();
-}, 1000);
+const now: Ref<Date> = useNow();
 
 const capitalize = (value: string): string => {
   const capitalizeFirstLetter = value.charAt(0).toUpperCase();

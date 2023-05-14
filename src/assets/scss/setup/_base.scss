@@ -8,6 +8,7 @@ $page-height: calc(100% - $header-height);
   font-weight: $font-weight-regular;
   font-size: $font-size-16;
   font-family: $font-family-1;
+  user-select: none;
 }
 
 body {
@@ -20,11 +21,11 @@ body {
 }
 
 .page {
-  @include page-padding();
+  padding: $spacing-32;
   position: absolute;
   inset: $header-height 0 0 0;
-  height: $page-height;
   width: 100%;
+  overflow-y: auto;
 }
 
 hr {
@@ -34,5 +35,11 @@ hr {
 @include media-query('screen-medium') {
   .page {
     height: fit-content;
+  }
+}
+
+@include media-query('screen-small') {
+  .page {
+    padding-inline: $spacing-24;
   }
 }

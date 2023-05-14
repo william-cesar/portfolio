@@ -45,7 +45,9 @@ export default {
     description:
       'Sou um desenvolvedor (e nas horas vagas, escrevo sobre tecnologia) com experiência na criação de aplicações para a web.'
   },
-  work_experience: {
+  work_section: {
+    main_techs: 'Principais tecnologias utilizadas:',
+    title: 'Experiência Profissional',
     uptime: {
       company: 'Uptime Consultants',
       position: 'Freelancer',
@@ -86,6 +88,12 @@ export default {
       }
     }
   },
-  main_techs: 'Principais tecnologias com as quais trabalhei:',
-  professional_xp: 'Experiência Profissional'
+  me: {
+    title: 'Um pouco sobre mim',
+    sec_1:
+      'Olá, meu nome é William e gosto de transformar ideias em software. Minha história na engenharia de software começou em 2019, quando senti a necessidade de otimizar uma rotina, na qual eu ligava para potenciais novos alunos na Uptime Consultants. No fim, percebi que tentar simplificar rotinas, poderia ensinar muito sobre programação.',
+    sec_2: 'Pula para os dias atuais, posso dizer que tenho o provilégio de ter trabalhado em diferentes ambientes e projetos, os quais tem me feito crescer muito como profissional e como pessoa. Meu foco atual está em ajudar a construir uma plataforma de edge computing que seja segura, simples e robusta na',
+    sec_3: 'Algumas tecnologias com que tenho trabalhado recementemente:',
+    techs: ['Typescript', 'Vue 3', 'Nuxt 3', 'Docker', 'Django', 'Node.js']
+  }
 };
