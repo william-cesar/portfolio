@@ -27,12 +27,14 @@ export default {
         label: 'Email',
         description: 'Me manda uma mensagem. Vamos conversar!'
       }
+    },
+    resume: {
+      label: 'Currículo',
+      description: 'Visualize e baixe meu currículo.'
     }
   },
-  download: 'Download',
   errors: {
-    file_download: 'O arquivo não pode ser baixado. Por favor, tente novamente mais tarde.',
-    file_render: 'Ocorreu um erro ao exibir o arquivo. Por favor, tente novamente mais tarde.'
+    not_optmized: 'Não otimizado em telas menores que 320px.'
   },
   presentation: {
     intro: {
