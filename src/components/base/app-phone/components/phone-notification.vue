@@ -76,7 +76,7 @@
 </template>
 
 <script setup lang="ts">
-import resume from '../../../../assets/files/pdf/resume.pdf';
+import resume from '@/assets/files/pdf/resume.pdf';
 </script>
 
 <style lang="scss">
